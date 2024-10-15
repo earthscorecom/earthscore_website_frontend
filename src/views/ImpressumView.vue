@@ -20,7 +20,6 @@
           <p>Registergericht: AG Köln</p>
           <p>Registernummer: HRB 112686</p>
           <p>Geschäftsführer: Manuel Mattern</p>
-          <p>Martin Börner has to be removed from here</p>
           <p>USt-ID: DE358475907</p>
         </div>
       </div>
