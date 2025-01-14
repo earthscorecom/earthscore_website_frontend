@@ -8,7 +8,6 @@
           <p class="font-medium">Verantwortliche Stelle:</p>
           <p>WhatsGreen Research & Science GmbH</p>
           <p>Rommerskirchener Str. 21</p>
-          <p>Walzwerk Atelier 65</p>
           <p>50259 Pulheim</p>
           <p class="pb-4">Deutschland</p>
           <p>Telefon: +49 (0)223 4786954 (Zentrale)</p>
@@ -172,7 +171,6 @@
         <p>WhatsGreen Research & Science GmbH</p>
         <p>Datenschutzbeauftragter</p>
         <p>Rommerskirchener Str. 21</p>
-        <p>Walzwerk Atelier 65</p>
         <p>50259 Pulheim</p>
         <p>oder per Mail unter:</p>
         <p>info@earthscore.com</p>
