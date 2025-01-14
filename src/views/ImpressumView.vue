@@ -6,7 +6,6 @@
         <div class="text-base mb-6">
           <p>WhatsGreen Research & Science GmbH</p>
           <p>Rommerskirchener Str. 21</p>
-          <p>Walzwerk Atelier 65</p>
           <p>50259 Pulheim</p>
           <p>Deutschland</p>
         </div>
