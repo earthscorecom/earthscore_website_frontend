@@ -3,7 +3,7 @@
   <div class="box mx-auto">
     <div
       :style="{ 'background-image': 'url(' + BgImg1 + ')' }"
-      class="w-full h-[784px] flex flex-col justify-center items-center bg-cover bg-center"
+      class="w-full h-[784px] flex flex-col justify-center items-center bg-cover bg-center relative transition-all duration-300 ease-in-out"
     >
       <span class="inline-block text-center"
         ><img class="md:h-[272px] h-[165px] w-[215px] md:w-[373px]" :src="ImgLogo" alt="Logo"
@@ -19,6 +19,9 @@
       >
         {{ t('homePage.screen1.btn') }}
       </button>
+      <div class="absolute bottom-[20px] left-[4px]">
+        <CookieConfigs />
+      </div>
     </div>
     <!-- SECOND BLOCK -->
     <div class="pt-12 pb-[72px] md:pt-32 md:pb-[226px] px-6 sm:px-8 lg:px-16" id="mission">
@@ -100,16 +103,16 @@
       :style="{ 'background-image': 'url(' + BgImg2 + ')' }"
       class="w-full h-[784px] flex flex-col justify-end bg-cover bg-bottom md:bg-center px-6 sm:px-8 lg:px-16 py-6 sm:py-8 lg:py-16"
     >
-      <div class="max-w-[930px]">
-        <p class="text-white headline">
+      <div class="max-w-[930px] text-white">
+        <p class="headline">
           {{ t('homePage.screen4.title') }}
         </p>
-        <p class="text-white headline">
+        <p class="headline">
           {{ t('homePage.screen4.subtitle') }}
         </p>
       </div>
-      <div class="max-w-[838px]">
-        <p class="text-base text-white font-medium uppercase pt-4">
+      <div class="w-full text-white">
+        <p class="text-base font-medium uppercase pt-4">
           {{ t('homePage.screen4.text') }}
         </p>
       </div>
@@ -121,16 +124,16 @@
       :style="{ 'background-image': 'url(' + BgImg3 + ')' }"
       class="w-full h-[784px] flex flex-col justify-end bg-cover bg-bottom md:bg-center px-6 sm:px-8 lg:px-16 py-6 sm:py-8 lg:py-16"
     >
-      <div class="box">
+      <div class="box text-white">
         <div class="text-white max-w-[838px]">
           <p class="headline">{{ t('homePage.screen6.title') }} <br /></p>
           <p class="headline">
             {{ t('homePage.screen6.subtitle') }}
           </p>
-          <p class="text-base font-medium uppercase pt-4">
-            {{ t('homePage.screen6.text') }}
-          </p>
         </div>
+        <p class="w-full text-base font-medium uppercase pt-4">
+          {{ t('homePage.screen6.text') }}
+        </p>
       </div>
     </div>
     <!-- SEVEN BLOCK -->
@@ -160,9 +163,9 @@
 </template>
 <script setup lang="ts">
 import { toBlock } from '@/utils/toBlock'
-import BgImg1 from '@/assets/img/full-screen-1.png'
-import BgImg2 from '@/assets/img/full-screen-2.png'
-import BgImg3 from '@/assets/img/full-screen-3.png'
+import BgImg1 from '@/assets/img/full-screen-1.svg'
+import BgImg2 from '@/assets/img/full-screen-2.svg'
+import BgImg3 from '@/assets/img/full-screen-3.svg'
 import ImgLogo from '@/assets/img/main-logo.svg'
 import DownIcon from '@/components/icons/DownIcon.vue'
 import ContactForm from '@/components/ContactForm.vue'
@@ -172,6 +175,7 @@ import SliderTeam from '@/components/SliderTeam/SliderTeam.vue'
 import SliderPossibility from '@/components/SliderPossibility.vue'
 import { useI18n } from 'vue-i18n'
 import { useWidth } from '@/composables/useWidth'
+import CookieConfigs from '@/components/CookieSettings/components/CookieConfigs.vue'
 
 const { t } = useI18n({ useScope: 'global' })
 
