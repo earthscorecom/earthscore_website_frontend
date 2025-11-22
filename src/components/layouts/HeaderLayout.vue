@@ -53,18 +53,25 @@ import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n({ useScope: 'global' })
 
-const isScrolled = ref(false)
-const isClicked = ref(false)
+const isScrolled = ref<boolean>(false)
+const isClicked = ref<boolean>(false)
 
-const handleScroll = () => {
+let intersectionObserver: IntersectionObserver | null = null
+
+const handleScroll = (): void => {
   if (window.scrollY > 250) {
     isScrolled.value = true
   } else {
     isScrolled.value = false
   }
 }
-const handleScroll2 = () => {
-  const observer = new IntersectionObserver(
+
+const initializeObserver = (): void => {
+  const targetElement = document.getElementById('viewport-contact-form')
+
+  if (!targetElement) return
+
+  intersectionObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) {
@@ -75,22 +82,28 @@ const handleScroll2 = () => {
     { threshold: 0.1 }
   )
 
-  observer.observe(document.getElementById('viewport-contact-form') as HTMLElement)
+  intersectionObserver.observe(targetElement)
 }
 
-const onClick = async () => {
+const onClick = async (): Promise<void> => {
   await toBlockWithPromise('contact-form', 'start')
   isClicked.value = true
 }
 
-onMounted(() => {
+onMounted((): void => {
   handleScroll()
   window.addEventListener('scroll', handleScroll)
-  document.addEventListener('scroll', handleScroll2)
+
+  if (useRoute().name === 'home') {
+    initializeObserver()
+  }
 })
 
-onUnmounted(() => {
-  document.removeEventListener('scroll', handleScroll2)
+onUnmounted((): void => {
   window.removeEventListener('scroll', handleScroll)
+
+  if (intersectionObserver) {
+    intersectionObserver.disconnect()
+  }
 })
 </script>
