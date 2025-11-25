@@ -4,6 +4,7 @@
       type="checkbox"
       :checked="isChecked"
       :value="value"
+      :disabled="disabled"
       class="hidden"
       @change="handleChange"
     />
@@ -24,7 +25,7 @@
 import { computed } from 'vue'
 import CheckIcon from '@/global/CheckIcon.vue'
 
-type CheckboxValue = boolean | string | number | (string | number)[]
+export type CheckboxValue = boolean | string | number | (string | number)[]
 
 const props = withDefaults(
   defineProps<{
@@ -35,6 +36,7 @@ const props = withDefaults(
     labelClass?: string
     icon?: string
     iconClass?: string
+    disabled?: boolean
   }>(),
   {
     value: '',
@@ -42,7 +44,8 @@ const props = withDefaults(
     activeClass: 'bg-primary-A300',
     labelClass: '',
     icon: '',
-    iconClass: 'text-black-N200 text-base font-medium'
+    iconClass: 'text-black-N200 text-base font-medium',
+    disabled: false
   }
 )
 const emit = defineEmits<{

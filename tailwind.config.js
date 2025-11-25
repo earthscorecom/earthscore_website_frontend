@@ -68,7 +68,8 @@ export default {
         }
       },
       boxShadow: {
-        base: '0 4px 6px rgba(0, 0, 0, 0.1)'
+        base: '0 4px 6px rgba(0, 0, 0, 0.1)',
+        base2: '0 0 11px -4px #FFFFFF;'
       },
     }
   },

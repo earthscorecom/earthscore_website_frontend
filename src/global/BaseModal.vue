@@ -3,16 +3,15 @@
     <div v-if="isVisible" class="modal-overlay backdrop-blur-sm" @click="handleOutsideClick">
       <div class="text-black-N10 bg-black-N900 py-4 px-5 rounded-lg shadow-base" @click.stop>
         <header class="flex justify-end items-center pb-3">
-          <slot name="header">
-            <ImageIcon
-              icon="heroicons-outline:x"
-              width="20"
-              height="20"
-              class-icon="text-black-N10 cursor-pointer"
-              class-wrap="flex justify-center items-center"
-              @click="$emit('close')"
-            />
-          </slot>
+          <slot name="header"></slot>
+          <ImageIcon
+            icon="heroicons-outline:x"
+            width="20"
+            height="20"
+            class-icon="text-black-N10 cursor-pointer"
+            class-wrap="flex justify-center items-center"
+            @click="$emit('close')"
+          />
         </header>
         <h3 class="font-medium py-2 text-base">{{ title }}</h3>
         <slot></slot>
