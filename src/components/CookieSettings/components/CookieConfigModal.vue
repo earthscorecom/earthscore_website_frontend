@@ -17,7 +17,10 @@
               :label="t(`cookie.${key}`)"
               :disabled="index === 0"
               :value="value"
-              :active-class="index === 0 ? 'bg-primary-A300 opacity-40' : 'bg-primary-A300'"
+              :active-class="
+                index === 0 ? 'bg-primary-A300 opacity-40 cursor-default' : 'bg-primary-A300'
+              "
+              :label-class="index === 0 ? 'cursor-default' : 'cursor-pointer'"
               @update:modelValue="
                 ($evt: CheckboxValue) => changeValue($evt as boolean, key as KeyPreferences)
               "
@@ -26,15 +29,17 @@
         </form>
       </div>
     </div>
-    <div class="flex gap-3 justify-center items-center mt-4">
+    <div
+      class="flex flex-col lg:flex lg:flex-row lg:gap-3 gap-y-3 justify-center items-center mt-4"
+    >
       <BaseButton
         :title="hasRightSaveCookies ? t('cookie.btn_save_close') : t('cookie.btn_accept_all')"
-        btn-class="text-xs p-2"
+        btn-class="text-xs p-2 w-full lg:min-w-max"
         @click="hasRightSaveCookies ? saveCookies() : setAll()"
       />
       <BaseButton
         :title="t('cookie.btn_decline_all')"
-        btn-class="text-xs p-2"
+        btn-class="text-xs p-2 w-full lg:min-w-max"
         @click="declineAll"
       />
     </div>
@@ -43,32 +48,18 @@
 
 <script setup lang="ts">
 // import libraries and references
-import { onMounted, reactive, computed, watch, onUnmounted } from 'vue'
+import { onMounted, reactive, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useForm } from 'vee-validate'
 
 // import stores
-import { useLanguage } from '@/composables/useLanguage'
-import en from '@/plugins/i18n/locales/en.json'
-import de from '@/plugins/i18n/locales/de.json'
 
 // import components
 import BaseButton from '@/global/BaseButton.vue'
 import BaseCheckbox from '@/global/BaseCheckbox.vue'
 import type { CheckboxValue } from '@/global/BaseCheckbox.vue'
 
-const { localLanguage, changeLocalLanguage } = useLanguage()
-
-const messages = {
-  en: en,
-  de: de
-}
-
-const { t, locale } = useI18n({
-  messages,
-  useScope: 'local',
-  locale: localStorage.getItem('lang')
-})
+const { t } = useI18n({ useScope: 'global' })
 
 type CookieOptions = {
   necessary: boolean
@@ -106,7 +97,10 @@ const preferencesReducedObject = computed<CookiePreferencesWithoutNecessary>(() 
 const hasRightSaveCookies = computed<boolean>(
   () => Object.values(preferencesReducedObject.value).includes(true) || meta.value.dirty
 )
-const reSizeBlockModal = computed<string>(() => (locale.value === 'en' ? 'w-72' : 'w-80'))
+const reSizeBlockModal = computed<string>(() => {
+  const lang: string | null = localStorage.getItem('lang')
+  return lang === 'en' ? 'w-72' : 'w-80'
+})
 
 const getConsent = (): void => {
   const cookies: string | null = localStorage.getItem('STORAGE_KEY')
@@ -133,35 +127,18 @@ const saveCookies = (): void => {
 }
 const setAll = (): void => {
   setAllToWithKeys(true)
-  saveCookies()
 }
 const declineAll = (): void => {
   setAllToWithKeys(false)
-  localStorage.removeItem('STORAGE_KEY')
-  emit('close')
+  meta.value.dirty = true
 }
 
 const changeValue = (value: boolean, key: KeyPreferences): void => {
   preferences[key] = value
   meta.value.dirty = true
 }
-const setLocalLanguage = () => {
-  const lang: string | null = localStorage.getItem('lang')
-  changeLocalLanguage(lang as string)
-}
 
 onMounted((): void => {
   getConsent()
-  setLocalLanguage()
 })
-onUnmounted((): void => {
-  setLocalLanguage()
-})
-
-watch(
-  () => localLanguage.value,
-  () => {
-    locale.value = localLanguage.value
-  }
-)
 </script>

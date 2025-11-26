@@ -19,7 +19,6 @@
           <p>{{ t('imprint.register') }}: AG Köln</p>
           <p>{{ t('imprint.register_number') }}: HRB 112686</p>
           <p>{{ t('imprint.head') }}: Manuel Mattern</p>
-          <p>{{ t('imprint.authorized_signatory') }}: Martin Börner</p>
           <p>{{ t('imprint.identification_number') }}: DE358475907</p>
         </div>
       </div>
@@ -31,8 +30,13 @@
   </div>
 </template>
 <script setup lang="ts">
-import Img from '@/assets/img/impressum.svg'
+// import libraries and references
 import { useI18n } from 'vue-i18n'
+
+// import stores
+
+// import components
+import Img from '@/assets/img/impressum.svg'
 
 const { t } = useI18n({ useScope: 'global' })
 </script>

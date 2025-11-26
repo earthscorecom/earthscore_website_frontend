@@ -3,7 +3,7 @@
   <div class="box mx-auto">
     <div
       :style="{ 'background-image': 'url(' + BgImg1 + ')' }"
-      class="w-full h-[784px] flex flex-col justify-center items-center bg-cover bg-center relative transition-all duration-300 ease-in-out"
+      class="w-full h-[784px] flex flex-col justify-center items-center bg-cover bg-center transition-all duration-300 ease-in-out"
     >
       <span class="inline-block text-center"
         ><img class="md:h-[272px] h-[165px] w-[215px] md:w-[373px]" :src="ImgLogo" alt="Logo"
@@ -19,9 +19,9 @@
       >
         {{ t('homePage.screen1.btn') }}
       </button>
-      <div class="absolute bottom-[20px] left-[4px]">
+      <!-- <div class="absolute bottom-[20px] left-[4px]">
         <CookieConfigs />
-      </div>
+      </div> -->
     </div>
     <!-- SECOND BLOCK -->
     <div class="pt-12 pb-[72px] md:pt-32 md:pb-[226px] px-6 sm:px-8 lg:px-16" id="mission">
@@ -46,60 +46,57 @@
         </p>
       </div>
       <div
-        class="px-6 sm:px-8 lg:px-16 pb-[72px] bg-white flex items-start relative border-y border-x-0 lg:border-y-0 lg:border-x border-gray-950"
+        class="px-6 sm:px-8 lg:px-16 pb-[72px] bg-white flex flex-col items-start relative border-y border-x-0 lg:border-y-0 lg:border-x border-gray-950"
       >
-        <div>
-          <div class="lg:h-[220px] pt-12 lg:pt-0 flex items-end">
-            <p class="headline">
-              {{ t('homePage.screen3.block2.title') }}
-            </p>
-          </div>
-          <p class="text-base pb-4 pt-4">
-            {{ t('homePage.screen3.block2.text') }}
+        <div class="lg:h-[220px] pt-12 lg:pt-0 flex items-end">
+          <p class="headline">
+            {{ t('homePage.screen3.block2.title') }}
           </p>
-          <button
-            @click="toBlock('slider-consumer', screenWidth > 768 ? 95 : 200)"
-            class="flex items-center space-x-3 mt-9 group lg:absolute group lg:top-[57%] lg:-translate-y-[-57%]"
-          >
-            <DownIcon
-              class="text-primary-A300 text-[32px] md:text-[56px] transition-all group-hover:rotate-0 rotate-[-90deg]"
-            ></DownIcon>
-            <span
-              class="text-base md:text-xl transition-all group-hover:text-primary-A300 group-hover:font-medium"
-            >
-              {{ t('homePage.screen3.btn') }}</span
-            >
-          </button>
         </div>
+        <p class="text-base pb-4 pt-4">
+          {{ t('homePage.screen3.block2.text') }}
+        </p>
+        <button
+          @click="toBlock('slider-consumer', screenWidth > 768 ? 95 : 200)"
+          class="flex items-center space-x-3 mt-9 lg:absolute group lg:bottom-[15%] lg:-translate-y-[-57%]"
+        >
+          <DownIcon
+            class="text-primary-A300 text-[32px] md:text-[56px] transition-all group-hover:rotate-0 rotate-[-90deg]"
+          ></DownIcon>
+          <span
+            class="text-base md:text-xl transition-all group-hover:text-primary-A300 group-hover:font-medium"
+          >
+            {{ t('homePage.screen3.btn') }}</span
+          >
+        </button>
       </div>
-      <div class="px-6 sm:px-8 lg:px-16 pb-[72px] bg-white flex items-start relative">
-        <div>
-          <div class="lg:h-[220px] pt-12 lg:pt-0 flex items-end">
-            <p class="headline">
-              {{ t('homePage.screen3.block3.title') }}
-            </p>
-          </div>
-          <p class="text-base pb-4 pt-4">
-            {{ t('homePage.screen3.block3.text') }}
+      <div class="px-6 sm:px-8 flex flex-col lg:px-16 pb-[72px] bg-white items-start relative">
+        <div class="lg:h-[220px] pt-12 lg:pt-0 flex items-end">
+          <p class="headline">
+            {{ t('homePage.screen3.block3.title') }}
           </p>
-          <button
-            @click="toBlock('slider-possibility', screenWidth > 768 ? 95 : 200)"
-            class="flex items-center space-x-3 mt-9 group lg:absolute group lg:top-[57%] lg:-translate-y-[-57%]"
-          >
-            <DownIcon
-              class="text-primary-A300 text-[32px] md:text-[56px] transition-all group-hover:rotate-0 rotate-[-90deg]"
-            ></DownIcon>
-            <span
-              class="text-base md:text-xl transition-all group-hover:text-primary-A300 group-hover:font-medium"
-            >
-              {{ t('homePage.screen3.btn') }}</span
-            >
-          </button>
         </div>
+        <p class="text-base pb-4 pt-4">
+          {{ t('homePage.screen3.block3.text') }}
+        </p>
+        <button
+          @click="toBlock('slider-possibility', screenWidth > 768 ? 95 : 200)"
+          class="flex items-center space-x-3 mt-9 lg:absolute group lg:bottom-[15%] lg:-translate-y-[-57%]"
+        >
+          <DownIcon
+            class="text-primary-A300 text-[32px] md:text-[56px] transition-all group-hover:rotate-0 rotate-[-90deg]"
+          ></DownIcon>
+          <span
+            class="text-base md:text-xl transition-all group-hover:text-primary-A300 group-hover:font-medium"
+          >
+            {{ t('homePage.screen3.btn') }}</span
+          >
+        </button>
       </div>
     </div>
     <!-- FOUR BLOCK -->
     <div
+      id="slider-consumer"
       :style="{ 'background-image': 'url(' + BgImg2 + ')' }"
       class="w-full h-[784px] flex flex-col justify-end bg-cover bg-bottom md:bg-center px-6 sm:px-8 lg:px-16 py-6 sm:py-8 lg:py-16"
     >
@@ -121,6 +118,7 @@
     <SliderConsumer></SliderConsumer>
     <!-- SIX BLOCK -->
     <div
+      id="slider-possibility"
       :style="{ 'background-image': 'url(' + BgImg3 + ')' }"
       class="w-full h-[784px] flex flex-col justify-end bg-cover bg-bottom md:bg-center px-6 sm:px-8 lg:px-16 py-6 sm:py-8 lg:py-16"
     >
@@ -162,6 +160,13 @@
   </div>
 </template>
 <script setup lang="ts">
+// import libraries and references
+import { useI18n } from 'vue-i18n'
+
+// import stores
+import { useWidth } from '@/composables/useWidth'
+
+// import components
 import { toBlock } from '@/utils/toBlock'
 import BgImg1 from '@/assets/img/full-screen-1.svg'
 import BgImg2 from '@/assets/img/full-screen-2.svg'
@@ -173,11 +178,7 @@ import ContactList from '@/components/ContactList.vue'
 import SliderConsumer from '@/components/SliderConsumer/SliderConsumer.vue'
 import SliderTeam from '@/components/SliderTeam/SliderTeam.vue'
 import SliderPossibility from '@/components/SliderPossibility.vue'
-import { useI18n } from 'vue-i18n'
-import { useWidth } from '@/composables/useWidth'
-import CookieConfigs from '@/components/CookieSettings/components/CookieConfigs.vue'
 
 const { t } = useI18n({ useScope: 'global' })
-
 const { screenWidth } = useWidth()
 </script>

@@ -164,9 +164,13 @@
   </div>
 </template>
 <script setup lang="ts">
-import Img from '@/assets/img/privacy-policy.svg'
-
+// import libraries and references
 import { useI18n } from 'vue-i18n'
+
+// import stores
+
+// import components
+import Img from '@/assets/img/privacy-policy.svg'
 
 const { t } = useI18n({ useScope: 'global' })
 </script>

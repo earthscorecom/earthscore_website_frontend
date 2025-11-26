@@ -42,11 +42,16 @@
   </div>
 </template>
 <script setup lang="ts">
+// import libraries and references
+import { useRoute } from 'vue-router'
+import { useI18n } from 'vue-i18n'
+
+// import stores
+
+// import components
 import FooterImg1 from '@/assets/img/footer-1.svg'
 import FooterImg2 from '@/assets/img/footer-2.svg'
 import ImgLogo from '@/assets/img/logo.svg'
-import { useRoute } from 'vue-router'
-import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n({ useScope: 'global' })
 const route = useRoute()

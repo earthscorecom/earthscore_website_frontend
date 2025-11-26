@@ -51,18 +51,21 @@
 // import libraries and references
 import { ref } from 'vue'
 import { Listbox, ListboxButton, ListboxOptions, ListboxOption } from '@headlessui/vue'
+import { useI18n } from 'vue-i18n'
 
 // import stores
-import { useLanguage } from '@/composables/useLanguage'
 
 // import components
 import ImageIcon from '@/global/ImageIcon.vue'
 
-const { languagesList, changeLocalLanguage } = useLanguage()
+const { locale } = useI18n({ useScope: 'global' })
 
+const languagesList: string[] = ['en', 'de']
 const currentLanguage = ref<string | null>(localStorage.getItem('lang'))
 
 const switchLanguage = (newLanguage: string): void => {
-  changeLocalLanguage(newLanguage)
+  currentLanguage.value = newLanguage
+  locale.value = newLanguage
+  localStorage.setItem('lang', currentLanguage.value)
 }
 </script>
