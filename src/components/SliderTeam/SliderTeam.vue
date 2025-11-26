@@ -59,11 +59,17 @@
   </div>
 </template>
 <script setup lang="ts">
+// import libraries and references
 import { computed, ref } from 'vue'
 import { Swiper, SwiperSlide } from 'swiper/vue'
+import { useI18n } from 'vue-i18n'
+
+// import stores
+import { useWidth } from '@/composables/useWidth'
+
+// import components
 import LeftIcon from '@/components/icons/LeftIcon.vue'
 import RightIcon from '@/components/icons/RightIcon.vue'
-
 import SliderItem from './components/SliderItem.vue'
 import ImgUser1 from '@/assets/img/user-1.svg'
 import ImgUser2 from '@/assets/img/user-2.svg'
@@ -71,9 +77,6 @@ import ImgUser3 from '@/assets/img/user-3.svg'
 import ImgUser4 from '@/assets/img/user-4.svg'
 import ImgUser5 from '@/assets/img/user-5.svg'
 import ImgUser6 from '@/assets/img/user-6.svg'
-
-import { useI18n } from 'vue-i18n'
-import { useWidth } from '@/composables/useWidth'
 
 const { t } = useI18n({ useScope: 'global' })
 
@@ -157,7 +160,6 @@ const next = () => {
 }
 
 const prev = () => {
-
   if (swiperInstanceMain.value.activeIndex !== 0) {
     const index = swiperInstanceMain.value.activeIndex - 1
     swiperInstanceMain.value.slideTo(index)

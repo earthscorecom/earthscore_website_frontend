@@ -5,7 +5,6 @@
     </h2>
     <div class="col-span-3">
       <swiper
-        id="slider-possibility"
         @init="init"
         :spaceBetween="30"
         :key="Number(isSmallScreen)"
@@ -62,8 +61,15 @@
   </div>
 </template>
 <script setup lang="ts">
+// import libraries and references
 import { Swiper, SwiperSlide } from 'swiper/vue'
+import { computed, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 
+// import stores
+import { useWidth } from '@/composables/useWidth'
+
+// import components
 import SliderImg1 from '@/assets/img/B2C_1.svg'
 import SliderImg2 from '@/assets/img/B2C_2.svg'
 import SliderImg3 from '@/assets/img/B2C_3.svg'
@@ -72,10 +78,6 @@ import SliderImgMob1 from '@/assets/img/b2c-mob-1.svg'
 import SliderImgMob2 from '@/assets/img/b2c-mob-2.svg'
 import SliderImgMob3 from '@/assets/img/b2c-mob-3.svg'
 import SliderImgMob4 from '@/assets/img/b2c-mob-4.svg'
-
-import { computed, ref } from 'vue'
-import { useI18n } from 'vue-i18n'
-import { useWidth } from '@/composables/useWidth'
 
 const { t } = useI18n({ useScope: 'global' })
 

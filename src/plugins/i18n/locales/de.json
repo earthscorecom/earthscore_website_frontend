@@ -107,7 +107,7 @@
         "name": "Martin Börner",
         "position": "Chief Sales Officer & \n General Manager",
         "deskPosition": "Business Development Team",
-        "text": "Martin Börner bringt jahrzehntelange Führungserfahrung aus der deutschen Telekommunikations- und IT-Branche zu EarthScore. Er war zunächst General Manager für die Smartphone-Marke Motorola und verantwortete anschließend über mehr als zehn Jahre das Deutschlandgeschäft von Samsung. Darüber hinaus war er Mitglied des geschäftsführenden Vorstands des Bitkom, des wichtigsten Digitalverbands in Deutschland. \n Bei EarthScore verantwortet er Vertrieb und Business Development und baut die Zusammenarbeit mit Enterprise-Kunden, OEMs und Partnern aus. Seine Erfahrung im Aufbau komplexer Vertriebs- und Partnerstrukturen fließt in die Markteinführung und Skalierung der Circular-Intelligence-Plattform ein."
+        "text": "Martin Börner bringt jahrzehntelange Führungserfahrung aus der deutschen Telekommunikations- und IT-Branche zu EarthScore. Er war zunächst General Manager für die Smartphone-Marke Motorola und verantwortete anschließend über mehr als zehn Jahre das Deutschlandgeschäft von Samsung. Darüber hinaus war er Mitglied des geschäftsführenden Vorstands des Bitkom, des wichtigsten Digitalverbands in Deutschland. Bei EarthScore verantwortet er Vertrieb und Business Development und baut die Zusammenarbeit mit Enterprise-Kunden, OEMs und Partnern aus. Seine Erfahrung im Aufbau komplexer Vertriebs- und Partnerstrukturen fließt in die Markteinführung und Skalierung der Circular-Intelligence-Plattform ein."
       },
        "item3": {
         "name": "Wilke Stroman",
@@ -131,7 +131,7 @@
         "name": "David Jäger",
         "position": "Product & UX Lead",
         "deskPosition": "Product Experience Team",
-        "text": "David Jäger arbeitet seit rund 15 Jahren an der Schnittstelle von Produktentwicklung, UX-Design und digitalem Markenauftritt. Nach einem abgeschlossenen Hochschulstudium hat er in zahlreichen Digitalprojekten User Interfaces, Designsysteme und Produktlogiken gestaltet und bis in die Umsetzung begleitet. \n Als Teil des Kernteams ist er seit Beginn bei EarthScore dabei und verantwortet die Konzeption und Gestaltung sämtlicher Produktoberflächen – von der ESG- und CSRD-Erfassungslogik über Dashboards und Circular-AI-Views bis hin zu Widgets, Pitchdecks und visuellen Stories. Er übersetzt ESG- und Circular-Intelligence-Anforderungen in klare, intuitive Nutzererlebnisse und stellt sicher, dass Frontend- und Softwareentwicklung diese Konzepte präzise umsetzen. Damit bildet er ein zentrales Bindeglied zwischen Fachinhalten, Technologie und Design."
+        "text": "David Jäger arbeitet seit rund 15 Jahren an der Schnittstelle von Produktentwicklung, UX-Design und digitalem Markenauftritt. Nach einem abgeschlossenen Hochschulstudium hat er in zahlreichen Digitalprojekten User Interfaces, Designsysteme und Produktlogiken gestaltet und bis in die Umsetzung begleitet. Als Teil des Kernteams ist er seit Beginn bei EarthScore dabei und verantwortet die Konzeption und Gestaltung sämtlicher Produktoberflächen – von der ESG- und CSRD-Erfassungslogik über Dashboards und Circular-AI-Views bis hin zu Widgets, Pitchdecks und visuellen Stories. Er übersetzt ESG- und Circular-Intelligence-Anforderungen in klare, intuitive Nutzererlebnisse und stellt sicher, dass Frontend- und Softwareentwicklung diese Konzepte präzise umsetzen. Damit bildet er ein zentrales Bindeglied zwischen Fachinhalten, Technologie und Design."
       }
     },
     "screen9": {
@@ -170,7 +170,6 @@
     "register": "Registergericht",
     "register_number": "Registernummer",
     "head": "Geschäftsführer",
-    "authorized_signatory": "Prokurist",
     "identification_number": "USt-ID"
   },
   "data_protection": {

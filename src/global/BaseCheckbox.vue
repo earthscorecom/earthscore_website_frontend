@@ -1,30 +1,36 @@
 <template>
-  <label class="sans-serif inline-flex items-center text-xs uppercase">
+  <label class="sans-serif inline-flex items-center text-xs uppercase" :class="labelClass">
     <input
       type="checkbox"
       :checked="isChecked"
       :value="value"
+      :disabled="disabled"
       class="hidden"
       @change="handleChange"
     />
 
     <span
-      class="h-[13.5pt] w-[13.5pt] cursor-pointer text-black-N900 rounded"
+      class="h-[13.5pt] w-[13.5pt] text-black-N900 rounded"
       :class="value ? activeClass + '' : 'bg-black-N900 border border-black-N10'"
     >
       <CheckIcon v-if="value && !icon" class="w-4 h-4 block m-auto" />
     </span>
-    <span v-if="label" class="ml-3" :class="labelClass">
+    <span v-if="label" class="ml-3">
       {{ label }}
     </span>
   </label>
 </template>
 
 <script setup lang="ts">
+// import libraries and references
 import { computed } from 'vue'
+
+// import stores
+
+// import components
 import CheckIcon from '@/global/CheckIcon.vue'
 
-type CheckboxValue = boolean | string | number | (string | number)[]
+export type CheckboxValue = boolean | string | number | (string | number)[]
 
 const props = withDefaults(
   defineProps<{
@@ -35,6 +41,7 @@ const props = withDefaults(
     labelClass?: string
     icon?: string
     iconClass?: string
+    disabled?: boolean
   }>(),
   {
     value: '',
@@ -42,7 +49,8 @@ const props = withDefaults(
     activeClass: 'bg-primary-A300',
     labelClass: '',
     icon: '',
-    iconClass: 'text-black-N200 text-base font-medium'
+    iconClass: 'text-black-N200 text-base font-medium',
+    disabled: false
   }
 )
 const emit = defineEmits<{

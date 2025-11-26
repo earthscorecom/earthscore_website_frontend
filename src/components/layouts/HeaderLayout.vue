@@ -41,22 +41,30 @@
       <BackArrow></BackArrow>
       <span class="pl-1"> {{ t('header.btnBack') }}</span>
     </RouterLink>
+    <div class="fixed z-[9999] bottom-24 left-12">
+      <CookieConfigs />
+    </div>
   </header>
 </template>
 <script setup lang="ts">
+// import libraries and references
 import { onMounted, onUnmounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
+import { useI18n } from 'vue-i18n'
+
+// import stores
 import { toBlockWithPromise } from '@/utils/toBlock'
+
+// import components
 import ImgLogo from '@/assets/img/header-logo.svg'
 import BackArrow from '@/components/icons/BackArrow.vue'
-import { useI18n } from 'vue-i18n'
+
+import CookieConfigs from '@/components/CookieSettings/components/CookieConfigs.vue'
 
 const { t } = useI18n({ useScope: 'global' })
 
 const isScrolled = ref<boolean>(false)
 const isClicked = ref<boolean>(false)
-
-let intersectionObserver: IntersectionObserver | null = null
 
 const handleScroll = (): void => {
   if (window.scrollY > 250) {
@@ -71,7 +79,7 @@ const initializeObserver = (): void => {
 
   if (!targetElement) return
 
-  intersectionObserver = new IntersectionObserver(
+  const intersectionObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) {
@@ -93,17 +101,11 @@ const onClick = async (): Promise<void> => {
 onMounted((): void => {
   handleScroll()
   window.addEventListener('scroll', handleScroll)
-
-  if (useRoute().name === 'home') {
-    initializeObserver()
-  }
+  document.addEventListener('scroll', initializeObserver)
 })
 
 onUnmounted((): void => {
   window.removeEventListener('scroll', handleScroll)
-
-  if (intersectionObserver) {
-    intersectionObserver.disconnect()
-  }
+  document.removeEventListener('scroll', initializeObserver)
 })
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div id="slider-consumer">
+  <div>
     <div class="hidden lg:block">
       <SliderDesktop :contentList="contentList"></SliderDesktop>
     </div>
@@ -9,6 +9,13 @@
   </div>
 </template>
 <script setup lang="ts">
+// import libraries and references
+import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+// import stores
+
+// import components
 import SliderDesktop from './components/SliderDesktop.vue'
 import SliderMobile from './components/SliderMobile.vue'
 import Img1 from '@/assets/img/B2B_1.svg'
@@ -21,8 +28,6 @@ import ImgMobi2 from '@/assets/img/b2b-mob-2.svg'
 import ImgMobi3 from '@/assets/img/b2b-mob-3.svg'
 import ImgMobi4 from '@/assets/img/b2b-mob-4.svg'
 import ImgMobi5 from '@/assets/img/b2b-mob-5.svg'
-import { computed } from 'vue'
-import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n({ useScope: 'global' })
 
