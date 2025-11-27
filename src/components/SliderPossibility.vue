@@ -5,7 +5,6 @@
     </h2>
     <div class="col-span-3">
       <swiper
-        id="slider-possibility"
         @init="init"
         :spaceBetween="30"
         :key="Number(isSmallScreen)"
@@ -47,7 +46,7 @@
               </div>
               <p
                 :class="{ invisible: !isActive }"
-                class="text-[18px] md:text-[32px] leading-[21px] font-medium md:font-light lg:my-4 mb-3 mt-16 lg:mt-12 slider-possibility-content"
+                class="uppercase text-[18px] md:text-[32px] leading-[21px] font-medium md:font-light lg:my-4 mb-3 mt-16 lg:mt-12 slider-possibility-content"
               >
                 {{ item.title }}
               </p>
@@ -62,20 +61,23 @@
   </div>
 </template>
 <script setup lang="ts">
+// import libraries and references
 import { Swiper, SwiperSlide } from 'swiper/vue'
-
-import SliderImg1 from '@/assets/img/B2C_1.png'
-import SliderImg2 from '@/assets/img/B2C_2.png'
-import SliderImg3 from '@/assets/img/B2C_3.png'
-import SliderImg4 from '@/assets/img/B2C_4.png'
-import SliderImgMob1 from '@/assets/img/b2c-mob-1.png'
-import SliderImgMob2 from '@/assets/img/b2c-mob-2.png'
-import SliderImgMob3 from '@/assets/img/b2c-mob-3.png'
-import SliderImgMob4 from '@/assets/img/b2c-mob-4.png'
-
 import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+
+// import stores
 import { useWidth } from '@/composables/useWidth'
+
+// import components
+import SliderImg1 from '@/assets/img/B2C_1.svg'
+import SliderImg2 from '@/assets/img/B2C_2.svg'
+import SliderImg3 from '@/assets/img/B2C_3.svg'
+import SliderImg4 from '@/assets/img/B2C_4.svg'
+import SliderImgMob1 from '@/assets/img/b2c-mob-1.svg'
+import SliderImgMob2 from '@/assets/img/b2c-mob-2.svg'
+import SliderImgMob3 from '@/assets/img/b2c-mob-3.svg'
+import SliderImgMob4 from '@/assets/img/b2c-mob-4.svg'
 
 const { t } = useI18n({ useScope: 'global' })
 

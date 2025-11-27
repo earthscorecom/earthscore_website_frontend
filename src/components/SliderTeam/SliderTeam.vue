@@ -51,7 +51,7 @@
             <p class="text-base text-center mt-1.5 mb-0.5">
               {{ user.name }}
             </p>
-            <p class="text-xs text-center">{{ user.position }}</p>
+            <p class="text-xs text-center whitespace-pre-line">{{ user.position }}</p>
           </div>
         </swiper-slide>
       </swiper>
@@ -59,21 +59,24 @@
   </div>
 </template>
 <script setup lang="ts">
+// import libraries and references
 import { computed, ref } from 'vue'
 import { Swiper, SwiperSlide } from 'swiper/vue'
+import { useI18n } from 'vue-i18n'
+
+// import stores
+import { useWidth } from '@/composables/useWidth'
+
+// import components
 import LeftIcon from '@/components/icons/LeftIcon.vue'
 import RightIcon from '@/components/icons/RightIcon.vue'
-
 import SliderItem from './components/SliderItem.vue'
-import ImgUser1 from '@/assets/img/user-1.png'
-import ImgUser2 from '@/assets/img/user-2.png'
-import ImgUser3 from '@/assets/img/user-3.png'
-import ImgUser4 from '@/assets/img/user-4.png'
-import ImgUser5 from '@/assets/img/user-5.png'
-import ImgUser6 from '@/assets/img/user-6.png'
-
-import { useI18n } from 'vue-i18n'
-import { useWidth } from '@/composables/useWidth'
+import ImgUser1 from '@/assets/img/user-1.svg'
+import ImgUser2 from '@/assets/img/user-2.svg'
+import ImgUser3 from '@/assets/img/user-3.svg'
+import ImgUser4 from '@/assets/img/user-4.svg'
+import ImgUser5 from '@/assets/img/user-5.svg'
+import ImgUser6 from '@/assets/img/user-6.svg'
 
 const { t } = useI18n({ useScope: 'global' })
 
@@ -157,8 +160,6 @@ const next = () => {
 }
 
 const prev = () => {
-  console.log('AAAAAAAAAaa')
-
   if (swiperInstanceMain.value.activeIndex !== 0) {
     const index = swiperInstanceMain.value.activeIndex - 1
     swiperInstanceMain.value.slideTo(index)

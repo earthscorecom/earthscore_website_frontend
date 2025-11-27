@@ -10,9 +10,9 @@
   "sidebar": {
     "list": {
       "item1": "Vision",
-      "item2": "Unsere Lösungen",
-      "item3": "Für Unternehmen",
-      "item4": "Für Verbraucher",
+      "item2": "Kreislaufansatz",
+      "item3": "Lösungen für Unternehmen",
+      "item4": "Impact Widget",
       "item5": "Team",
       "item6": "Kontakt"
     },
@@ -20,79 +20,79 @@
   },
   "homePage": {
     "screen1": {
-      "subtitle": "turning choices into earth's voice",
+      "subtitle": "profit from circular intelligence",
       "btn": "Demo buchen"
     },
     "screen2": {
       "title": "Unsere Vision",
-      "text": "Wir von EarthScore stellen uns eine Zukunft vor, in der Nachhaltigkeit eine Lebensweise ist, die integraler Bestandteil der Gesellschaft ist und einen blühenden Planeten für künftige Generationen sichert. Wir setzen uns für eine Welt ein, in der Unternehmen verantwortungsvoll handeln, Verbraucher fundierte Entscheidungen treffen und jede Handlung zum kollektiven Wohlstand und zur Gesundheit unseres Planeten beiträgt."
+      "text": "EarthScore treibt den Wandel von linearer Wirtschaft zu messbar profitabler Zirkularität. Unsere Circular-Intelligence-Plattform verbindet Daten, KI und Impact zu einer neuen Form ökonomischer Effizienz: Sie senkt Kosten, steigert ROI und reduziert CO₂ dort, wo es wirklich zählt – im Betrieb, im Markt und in der Wertschöpfungskette. So wird Nachhaltigkeit vom Pflichtfeld zum Wettbewerbsvorteil und zum Motor für Wachstum, Resilienz und Zukunftsfähigkeit."
     },
     "screen3": {
       "block1": {
-        "title": "360° Ansatz",
-        "subtitle": "EarthScore Excellence Center",
-        "text": "Das Herzstück von EarthScore ist unser KI-gestütztes ESG Excellence Center, das Expertenwissen und hochentwickelte KI-Analysen nutzt, um nachhaltige Lösungen für alle Branchen zu entwickeln. Unser Zentrum konzentriert sich auf detaillierte, präzisionsgesteuerte Datenanalysen und setzt modernste Technologien ein, um nachhaltige Praktiken zu innovieren und zu verbessern. Durch die Integration verschiedener Branchenexpertisen setzen wir globale Standards für verantwortungsvolle und effektive Geschäftsabläufe."
+        "title": "Kreislauf Ansatz",
+        "subtitle": "EarthScore Circular Center",
+        "text": "Das Herzstück von EarthScore ist unser KI-gestütztes Circular Center, in dem Expertinnen und Experten mit künstlicher Intelligenz zusammenarbeiten, um aus Daten konkrete, nachhaltige Geschäftschancen zu machen. Statt nur zu berichten, identifizieren wir entlang des gesamten Kreislaufs – von Beschaffung über Produktion bis Nutzung und Rückführung – die Hebel mit dem größten Nutzen. So entstehen praxisnahe Lösungen, die Kosten senken, Energie einsparen, CO₂ reduzieren und Unternehmen helfen, verantwortungsvoll und zugleich profitabel zu wachsen."
       },
       "block2": {
-        "title": "Für Unternehmen",
-        "text": "EarthScore bietet fortschrittliche ESG-Lösungen, die nicht nur die Einhaltung von Vorschriften gewährleisten, sondern auch Innovation und Unternehmenswachstum fördern. EarthScore verbindet Wissen mit Handeln und stellt so sicher, dass unsere Bemühungen zu greifbaren Ergebnissen führen."
+        "title": "Für Ihr Unternehmen",
+        "text": "EarthScore unterstützt Unternehmen dabei, ihre ESG- und CSRD-Pflichten effizient zu erfüllen – mit einem Tool, das relevante Daten strukturiert erfasst und auswertet. Unsere Circular-KI identifiziert daraus Einsparpotenziale bei Kosten, Energie und CO₂ und eröffnet zusätzliche Kreislaufchancen über den Circular Marketplace. So werden Pflichtdaten zum Hebel für eine bessere Wirtschaftlichkeit und Umweltbilanz."
       },
       "block3": {
-        "title": "Für Verbraucher",
-        "text": "Verändern Sie Ihr Einkaufserlebnis und fördern Sie Ihren nachhaltigen Lebensstil. Die EarthScore App vereinfacht komplexe Nachhaltigkeitsdaten und gibt Ihnen die Möglichkeit, mit Vertrauen und Klarheit einzukaufen."
+        "title": "Für Ihren Kundendialog",
+        "text": "Mit EarthScore werden Nachhaltigkeitsaussagen zu belegbaren Fakten. Einsparungen bei Kosten, Energie und CO₂ lassen sich als klare Kennzahlen für B2B-Partner und Endkunden aufbereiten und gezielt in Produktkommunikation, Kampagnen und Reporting einsetzen. So entsteht ein Kundendialog, der Greenwashing durch transparente Wirkung ersetzt – und Vertrauen, Marke und Absatz stärkt."
       },
       "btn": "Mehr erfahren"
     },
     "screen4": {
       "title": "EarthScore Lösungen für Unternehmen:",
-      "subtitle": "Sorgfältige Entscheidungen, die weltweit nachhallen",
-      "text": "Unsere Plattform lässt sich flexibel an Ihre spezifischen Geschäftsanforderungen und die sich verändernden rechtlichen Rahmenbedingungen anpassen."
+      "subtitle": "Circular Intelligence, die sich rechnet",
+      "text": "unsere plattform macht esg- und csrd-pflichten zu messbaren einsparungen bei Kosten, Energie und CO₂ – flexibel für ihre Wertschöpfung und zukünftige regulatorik."
     },
     "screen5": {
       "title": "EarthScore für Ihr Unternehmen",
       "item1": {
-        "title": "ESG REPORT Auto Pilot",
-        "text": "Mit unserem ESG Report Auto Pilot sind Sie den Anforderungen der Regulierungsbehörden und den Erwartungen der Stakeholder meilenweit voraus. Unser automatisiertes Reporting-Tool rationalisiert den ESG-Reporting-Prozess, gewährleistet Genauigkeit und Effizienz und bietet gleichzeitig wertvolle Einblicke in Ihre Nachhaltigkeitsleistung. Mit dem ESG Report Auto Pilot können Sie regulatorische Anforderungen mühelos erfüllen und sich auf die Förderung eines nachhaltigen Wachstums konzentrieren. Unsere Lösungen sind skalierbar und eignen sich für Unternehmen jeder Größe. Sie begleiten Unternehmen durch jeden Schritt des Prozesses, von der Datenerfassung bis hin zur KI-Berichterstattung, und stellen so die Einhaltung der Vorschriften sicher und treiben strategische Ziele voran."
+        "title": "Circular AI Engine",
+        "text": "Die Circular AI Engine wird das zentrale Betriebssystem von EarthScore. Sie verbindet ESG- und CSRD-Daten mit Informationen aus ERP, Produktion, Lieferkette und Energieverbrauch und formt daraus ein einheitliches, verständliches Bild Ihrer Wertschöpfung. KI-gestützte Analysen erkennen Muster, identifizieren Hotspots bei Kosten, Energie und CO₂ und bewerten deren Potenzial für Effizienz und Zirkularität. Gleichzeitig unterstützt die Engine den Datenmanagement-Prozess – etwa durch intelligente Assistenten, geführte Workflows und automatisch verdichtete Management-Überblicke. Auf dieser Basis entstehen belastbare Business Cases und die Grundlage für Module wie Audits, Efficiency Playbooks und den Circular Marketplace. Wo Standardfunktionen nicht ausreichen, entwickeln wir gemeinsam mit Ihnen projektbasiert Erweiterungen – damit die Plattform genau zu Ihrem Geschäftsmodell passt."
       },
       "item2": {
-        "title": "Beratererfahrung begegnet EARTHSCORE-Experten",
-        "text": "Unsere maßgeschneiderten Beratungsdienste verbinden jahrzehntelange Branchenerfahrung mit den neuesten Fortschritten in der Nachhaltigkeitstechnologie. Von umfassenden ESG-Audits bis hin zu strategischen Implementierungsplänen arbeiten wir mit Unternehmen zusammen, um Nachhaltigkeitsherausforderungen in Wachstums-, Resilienz- und Wettbewerbsvorteile zu verwandeln. Unser Ansatz geht über die Erfüllung von Anforderungen hinaus – er zielt darauf ab, Ihre Geschäftsbeziehungen zu verbessern und neue Chancen zu erkunden. Unser ESG Excellence Center und unsere KI-unterstützten Dienste bieten personalisierte Empfehlungen, Szenarioanalysen und vorausschauende Einblicke, um Ihre Ziele zu erreichen. Erleben Sie die Synergie von KI und menschlicher Intelligenz. Mit unserer Expertise und unserem Ruf für Exzellenz sind wir hier, um Ihr Unternehmen in eine Nachhaltigkeitskraft zu verwandeln. Warten Sie nicht – gestalten Sie die Zukunft schon heute."
+        "title": "ESG & CSRD Audit Suite",
+        "text": "Die ESG & CSRD Audit Suite ist unsere erprobte Bestandslösung für Nachhaltigkeitsbericht und regulatorische Anforderungen. Ein differenziertes Rollen- und Rechtemanagement stellt sicher, dass Mitarbeitende und Lieferanten genau das sehen und bearbeiten, was für sie relevant ist – von Klimadaten bis zu Lieferkettenthemen. Ein intelligenter ESIN-Filter reduziert über 1.600 Datenpunkte auf die wirklich wichtigen Fragen Ihres Unternehmens und schafft einen klar geführten, schlanken ESG- und CSRD-Reporting-Prozess. Doppelte Wesentlichkeitsanalyse, semantisches Norm-Parsing und dynamische Fragebäume sorgen dafür, dass Sie gleichzeitig CSRD-konform, effizient und zukunftssicher aufgestellt sind. So wird aus komplexer Nachhaltigkeitsregulierung ein strukturiertes, auditfähiges Fundament für Ihre Dekarbonisierungs- und Nachhaltigkeitsstrategie, das wir bei Bedarf projektbasiert an Branche, EU-Regulatorik und interne Strukturen anpassen."
       },
       "item3": {
-        "title": "EarthScore AI",
-        "text": "Mit EarthScore AI, unserer hochmodernen KI-Lösung, die entwickelt wurde, um die Leistung der neuesten technologischen Fortschritte zu nutzen, können Sie mit Zuversicht in die Zukunft der Geschäftsstrategie vordringen. EarthScore stattet Unternehmen mit umsetzbaren Erkenntnissen und hochentwickelten prädiktiven Analysen aus und hilft ihnen, im Wettbewerb die Nase vorn zu haben. Unsere KI-Plattform, EarthScore AI, prognostiziert nicht nur aufkommende Trends, sondern identifiziert auch potenzielle Risiken und deckt wertvolle versteckte Chancen auf. Durch die Integration dieser Erkenntnisse werden Unternehmen in die Lage versetzt, sich in dem sich ständig weiterentwickelnden und dynamischen Bereich der Nachhaltigkeit zurechtzufinden und zu übertreffen. Dieser proaktive Ansatz stellt sicher, dass Ihr Unternehmen sich anpassen und effektiv reagieren kann, um eine nachhaltige und profitable Zukunft zu sichern."
+        "title": "Efficiency Playbooks",
+        "text": "Die Efficiency Playbooks übersetzen Daten und Analysen in konkrete Projekte für Energieeffizienz, Ressourceneffizienz und Dekarbonisierung. Aus den Ergebnissen der Circular AI Engine entstehen priorisierte Maßnahmenpakete – von Retrofit bestehender Anlagen über optimierte Produktionsprozesse bis zu materialeffizienten Produktdesigns. Jedes Playbook zeigt, welche Schritte nötig sind, welche Einsparungen bei Kosten, Energieverbrauch und CO₂-Fußabdruck möglich sind und in welchem Zeitraum sich Maßnahmen typischerweise rechnen. Damit wird Nachhaltigkeit von einem abstrakten Ziel zu einem klaren Umsetzungsplan für Produktion, Operations und Management. Auf Wunsch entwickeln wir gemeinsam mit Ihnen unternehmensspezifische Playbooks und Pilotprojekte, die sich nahtlos in Budgetplanung, Investitionsentscheidungen und Ihre übergreifende Transformations- und Klimaschutzstrategie integrieren lassen."
       },
       "item4": {
-        "title": "EarthScore Dashboard",
-        "text": "Willkommen zu unserem modernen Business Intelligence Dashboard. Passen Sie es mühelos mit Widgets an, um Ihre Analysen auf Ihre Geschäftsanforderungen abzustimmen. Bleiben Sie konform mit vorausgewählten KPIs, die auf regulatorische Anforderungen zugeschnitten sind, und gewinnen Sie so einen Vorsprung. Bringen Sie Ihre KPIs in Einklang mit den Unternehmenszielen und treiben Sie Ihre strategischen Ziele voran. Tauchen Sie mit intuitiven Drill-Down-Optionen tief in die Daten ein. Verbessern Sie Ihre Strategie mit personalisierten ESG- und KI-Lösungen. Unser Dashboard bietet umfassende Analysen durch einen doppelten Wesentlichkeitsansatz mit robusten Filteroptionen, die nach Scope 1-4 oder ESG-Kriterien sortieren. Greifen Sie auf relevante Informationen zu und überwachen Sie Ihre Nachhaltigkeitsziele effizient."
+        "title": "Circular Marketplace",
+        "text": "Der Circular Marketplace erschließt zusätzliche Wertschöpfung entlang der Kreislaufwirtschaft. Auf Basis Ihrer Daten und Materialströme matcht die Plattform Abfall- und Nebenprodukte mit passenden Einsatzmöglichkeiten bei anderen Unternehmen – bevorzugt regional und branchenübergreifend. So sinken Entsorgungs- und Beschaffungskosten, während neue Erlösquellen entstehen und Ihr CO₂-Fußabdruck messbar reduziert wird. Der Marketplace stärkt Ressourceneffizienz, verhindert Wertverluste und macht zirkuläre Geschäftsmodelle im Alltag nutzbar – weit über klassische Recyclingansätze hinaus. Transparente Kennzahlen zu Kosten, Einsparungen und Emissionen zeigen, welche Kreislaufbeziehungen sich besonders lohnen. Auf diese Weise erweitert der Circular Marketplace die Wirkung der Circular AI Engine über das eigene Werk hinaus und wird zu einem lebendigen Ökosystem für nachhaltige, klimafreundliche Industriepartnerschaften."
       },
       "item5": {
-        "title": "Vereinfachte ESG-Compliance",
-        "text": "Unsere Plattform vereinfacht die Dateneingabe über mehrere Standards wie GRI, ESRS und SFDR. Durch die Integration fortschrittlicher KI kategorisiert und gleicht sie Ihre Daten anhand einer einzigen Eingabe ab und gewährleistet so Genauigkeit und die Einhaltung internationaler Standards. Dieser KI-gesteuerte Prozess automatisiert die Datenaggregation und -validierung und gewährleistet gleichzeitig Integrität und Zuverlässigkeit. Geben Sie Daten nur einmal ein, um mehrere Standards zu erfüllen, und reduzieren Sie so die Kosten für die Datenerfassung. Profitieren Sie von Echtzeit-Berichten und -Analysen mit kontinuierlichen Aktualisierungen des Konformitätsstatus, detaillierten Berichten und umsetzbaren Erkenntnissen. Unser System rationalisiert auch die Überwachung der Einhaltung von Vorschriften und passt sich automatisch an die neuesten ESG-Vorschriften an, damit Ihr Unternehmen mit minimalem manuellem Aufwand konform bleibt."
+        "title": "White Label Suite",
+        "text": "Die White Label & Agency Suite richtet sich an Beratungen, Agenturen und Steuerberatungskanzleien, die ihren Kunden ESG-, Nachhaltigkeits- und Circular-Economy-Lösungen anbieten wollen, ohne eine eigene Technologieplattform aufzubauen. Sie erhalten Zugriff auf Circular AI Engine, Audit Suite, Efficiency Playbooks und Circular Marketplace und integrieren diese Bausteine in eigene Markenauftritte, Produkte und Transformationsprogramme – von Energieeffizienz- und Dekarbonisierungsprojekten bis zu ganzheitlichen Nachhaltigkeitsstrategien. So entstehen wiederkehrende Umsatzmodelle und klar differenzierte Angebote im Wettbewerb. Technische Integration, Datenanbindung und individuelle Anpassungen begleiten wir projektbasiert, damit das Setup exakt zu Ihrem Portfolio passt. Wer dieses Modell nutzen möchte, kann direkt Kontakt aufnehmen."
       }
     },
     "screen6": {
-      "title": "EarthScore App:",
-      "subtitle": "Dein Kompass für bewusstes Konsumieren",
-      "text": "Scannen, lernen und handeln - machen Sie jeden Einkauf zu einem Schritt in Richtung Nachhaltigkeit. Beteiligen Sie sich, engagieren Sie sich und nehmen Sie Einfluss. Klug einkaufen, grün leben!"
+      "title": "EarthScore Impact Widget:",
+      "subtitle": "Next Level Kundenkommunikation",
+      "text": "Zeigen sie einsaprungen bei kosten, energie und CO₂ als klare kennzahlen – für B2B-partner und verbraucher. Aus daten werden glaubwürdige stories, die vertrauen stärken, marke profilieren und nachhaltigen konsum fördern."
     },
     "screen7": {
-      "title": "EarthScore für Verbraucher",
+      "title": "EarthScore für Ihren Kundendialog",
       "item1": {
-        "title": "EarthScore App",
-        "text": "Verbessern Sie Ihr Einkaufserlebnis mit unserer EarthScore Consumer App! Sagen Sie Zweifeln adieu und begrüßen Sie Selbstsicherheit! Mit unserer App kaufen Sie intelligenter und nachhaltiger, mit fundiertem Wissen zur Hand. Unser EarthScore-Bewertungssystem stellt sicher, dass Sie umweltfreundliche Entscheidungen treffen und Greenwashing vermeiden. Teilen Sie Ihre Lebensstil-Erfolge und verfolgen Sie Ihren Fortschritt nahtlos. Ihr Feedback gestaltet unsere Funktionen direkt, um Ihr Erlebnis zu verbessern. Shoppen Sie mit Gewissheit, shoppen Sie mit unserer App. Scannen Sie Produkte, entdecken Sie deren Umweltauswirkungen und treffen Sie informierte, nachhaltige Entscheidungen, die mit Ihren Werten übereinstimmen."
+        "title": "Circular Impact Widget – B2B",
+        "text": "Das Circular Impact Widget – B2B zeigt Ihren Geschäftskunden live, wie sich Nachhaltigkeit rechnet: im Kundentermin, auf der Website oder am Messestand. Aus den Daten der Circular AI Engine entstehen interaktive Szenarien mit Vorher/Nachher-Effekten, Einsparungen bei Kosten, Energie und CO₂ sowie klar erkennbaren ROI-Indikatoren. So wird aus abstrakten ESG- und Dekarbonisierungszielen ein belastbarer Business Case für Investitionen in Effizienz und Kreislaufwirtschaft. Gestaltung, Inhalte und Einbindung des Widgets können wir an Ihre Marke, Vertriebsideen und Zielkunden anpassen – sprechen Sie uns gern an."
       },
       "item2": {
-        "title": "Verbessern Sie Ihr Einkaufserlebnis",
-        "text": "Entdecken Sie mit unserer App die Nachhaltigkeit Ihrer Einkäufe! Scannen Sie jeden Barcode und erfahren Sie sofort die Umweltauswirkungen Ihrer Produkte. Von Lebensmitteln bis hin zu Gadgets - treffen Sie bewusste Entscheidungen. Finden Sie leicht Alternativen, um Ihren ökologischen Fußabdruck zu verringern und Ihre Einkaufsgewohnheiten zu verbessern. Übernehmen Sie die Kontrolle über Ihre Auswirkungen auf den Planeten. Fangen Sie an zu scannen, fangen Sie an zu verändern, fangen Sie an, etwas zu bewirken."
+        "title": "Messestand mit Proof statt Claims – B2B",
+        "text": "Am Messestand oder im Showroom wird das Circular Impact Widget zum Beweis statt nur zur Behauptung. Ihre Teams können gemeinsam mit Besuchern durchspielen, wie viel Energie, CO₂ und laufende Kosten eine Umrüstung oder ein neues Produkt über die Lebensdauer einspart – je nach Anwendung, Standort oder Tarif. So werden Nachhaltigkeitsversprechen zu überprüfbaren Zahlen und zu einem starken Verkaufsargument im technischen Dialog. Visuals, Szenarien und Sprache lassen sich auf Ihre Markenwelt und Branchen-Story zuschneiden, damit das Erlebnis genau zu Ihrem Messe- und Vertriebskonzept passt. Bei Interesse zeigen wir Ihnen gerne konkrete Beispiele."
       },
       "item3": {
-        "title": "Maßgeschneiderte Nachhaltigkeit mit ES SubScores",
-        "text": "Vertiefen Sie Ihr Wissen über Nachhaltigkeit mit den EarthScore SubScores. Ganz gleich, ob Sie Verpackungsmüll reduzieren möchten, soziale Verantwortung unterstützen oder Gesundheit und Wellness in den Vordergrund stellen wollen - unsere App bietet detaillierte, auf Ihre Präferenzen zugeschnittene Einblicke und hilft Ihnen, nachhaltige Entscheidungen zu treffen, die für Sie wichtig sind."
+        "title": "Circular Impact im Warenkorb – B2C",
+        "text": "„Circular Impact im Warenkorb“ bedeutet: Ihre Kunden sehen schon beim Einkauf, wie sich ein Produkt auf Energieverbrauch, CO₂-Fußabdruck und laufende Kosten auswirkt – im Online-Shop, in einer App oder am digitalen Regal. Das Circular Impact Widget übersetzt komplexe Nachhaltigkeitsdaten der Circular AI Engine in klare, verständliche Kennzahlen und Vergleiche. So werden Kaufentscheidungen transparenter, bewusster und zugleich wirtschaftlich nachvollziehbar. Darstellung, Tonalität und Tiefe der Informationen können wir an Ihre Zielgruppen, Touchpoints und Markenpositionierung anpassen, damit sich das Widget harmonisch in Ihr bestehendes B2C-Erlebnis einfügt. Für individuelle Konzepte können Sie direkt Kontakt mit uns aufnehmen."
       },
       "item4": {
-        "title": "Die direkte Feedback Loop Funktion",
-        "text": "Sagen Sie Ihre Meinung und beeinflussen Sie Veränderungen mit der direkten Feedback Loop Funktion. Teilen Sie Ihre Gedanken direkt mit den Herstellern, geben Sie Feedback zur Produktnachhaltigkeit und tragen Sie zur Entwicklung grünerer, nachhaltigerer Produkte bei. Ihr Feedback ist wichtig, und EarthScore sorgt dafür, dass es gehört wird."
+        "title": "Green Claims, die man prüfen kann – B2C",
+        "text": "Kunden sind Greenwashing müde – sie wollen Green Claims, die man prüfen kann. Das Circular Impact Widget liefert dafür transparente Daten aus der Circular AI Engine: Kennzahlen zu Energieeinsparung, CO₂-Reduktion und Lebenszyklus-Effekten, die nachvollziehbar dokumentiert werden können. Unternehmen integrieren diese Fakten in Kampagnen, Produktseiten, Kundenservice oder per QR-Code auf Verpackungen und stärken damit Vertrauen und Markenprofil. Umfang und Tiefe der Informationen lassen sich flexibel auf Ihre Branche, Regulatorik und Tonalität abstimmen. Gemeinsam entwickeln wir Setups, die rechtliche Anforderungen unterstützen und Ihre Kommunikationsstrategie optimal ergänzen – sprechen Sie uns einfach an."
       }
     },
     "screen8": {
@@ -101,37 +101,37 @@
         "name": "Manuel Mattern",
         "position": "Founder & CEO",
         "deskPosition": "Visionary Management Team",
-        "text": "Als ausgewiesener Visionär machte sich Manuel Mattern zunächst einen Namen, indem er ein führendes Vertrauenssiegel im deutschen E-Commerce-Sektor etablierte. Seitdem hat er eine erfolgreiche unternehmerische Laufbahn eingeschlagen und bei EarthScore seine profunde Expertise in Technologie und Produktentwicklung unter Beweis gestellt."
+        "text": "Mit über 20 Jahren Erfahrung in Digitalwirtschaft und Technologie gilt Manuel Mattern als erfahrener Branchenveteran. Als Product Owner eines führenden Vertrauenssiegels im deutschen E-Commerce verantwortete er die Neuentwicklung des Bewertungs- und Qualitätssystems – inklusive Rollout auf zehntausende Bestandskunden. In den vergangenen Jahren hat er zudem zahlreiche große Digitalberatungs- und Softwareprojekte von der MVP-Phase bis zum produktiven Einsatz begleitet und umgesetzt. Bei EarthScore bündelt er diese Produkt- und Datenkompetenz, um eine skalierbare Circular-Intelligence-Plattform aufzubauen, die Nachhaltigkeit, Profitabilität und Dekarbonisierung operativ zusammenführt und langfristig ausrichtet."
       },
       "item2": {
         "name": "Martin Börner",
-        "position": "Chief Sales Officer & General Manager",
+        "position": "Chief Sales Officer & \n General Manager",
         "deskPosition": "Business Development Team",
-        "text": "Martin Börner bringt einen reichen Erfahrungsschatz aus der deutschen IT- und Telekommunikationsbranche mit zu EarthScore. Zuvor war er unter anderem stellvertretender Geschäftsführer bei Samsung Electronics GmbH und General Manager und Sales Director bei Motorola, was seine umfassende Branchenkenntnis unterstreicht."
+        "text": "Martin Börner bringt jahrzehntelange Führungserfahrung aus der deutschen Telekommunikations- und IT-Branche zu EarthScore. Er war zunächst General Manager für die Smartphone-Marke Motorola und verantwortete anschließend über mehr als zehn Jahre das Deutschlandgeschäft von Samsung. Darüber hinaus war er Mitglied des geschäftsführenden Vorstands des Bitkom, des wichtigsten Digitalverbands in Deutschland. Bei EarthScore verantwortet er Vertrieb und Business Development und baut die Zusammenarbeit mit Enterprise-Kunden, OEMs und Partnern aus. Seine Erfahrung im Aufbau komplexer Vertriebs- und Partnerstrukturen fließt in die Markteinführung und Skalierung der Circular-Intelligence-Plattform ein."
       },
-      "item3": {
-        "name": "Prof. Agnieszka Gehringer",
-        "position": "Head of Board of Scientific Research",
-        "deskPosition": "Science Team",
-        "text": "Prof. Dr. Agnieszka Gehringer, eine angesehene Akademikerin und Forscherin, studierte Wirtschaftswissenschaften an der Sapienza Università di Roma. Mit Lehrtätigkeiten an der Georg-August-Universität Göttingen und der Fachhochschule Köln hat sie sich auf Finanzmarktintegration und Innovationsökonomie spezialisiert. Bei EarthScore ist sie Vorsitzende des wissenschaftlichen Beirats und setzt ihre Expertise in der Nachhaltigkeitsmessung ein."
+       "item3": {
+        "name": "Wilke Stroman",
+        "position": "Investor & Strategic \n Growth Advisor",
+        "deskPosition": "Growth & Scale Advisory",
+        "text": "Wilke Stroman ist Digitalunternehmer und Investor mit starkem Fokus auf Wachstums- und Skalierungsthemen. Er gründete im Jahr 2000 Sparhandy und entwickelte die Marke zu einem der bekanntesten und umsatzstärksten Online-Direktvertriebe für Mobilfunkverträge und Smartphone-Bundles in Deutschland. Anschließend übernahm er als CEO Deutschland die Verantwortung für das deutsche Geschäft der mobilezone-Gruppe und wurde später in die Co-CEO-Rolle der Gruppe berufen. Unter seiner Führung wurde mobilezone Deutschland erfolgreich an die freenet AG verkauft. Heute konzentriert sich Wilke verstärkt auf Beteiligungen und Portfolio-Entwicklungen – als Investor bei EarthScore unterstützt er das Team als strategischer Sparringspartner für Wachstum, Expansion und Wertaufbau."
       },
       "item4": {
+        "name": "Prof. Agnieszka Gehringer",
+        "position": "Head of Board \n of Scientific Research",
+        "deskPosition": "Science Team",
+        "text": "Prof. Dr. Agnieszka Gehringer ist Professorin für Volkswirtschaftslehre an der TH Köln und Senior Research Analyst am Flossbach von Storch Research Institute, mit Schwerpunkten in Makroökonomie, Finanzmarktintegration, Innovationsökonomik und Nachhaltigkeitsmessung. Sie studierte Volkswirtschaftslehre in Rom und Turin und lehrte unter anderem an der Georg-August-Universität Göttingen. Als Mitautorin des Springer-Bands „Mapping Sustainability Measurement“ bietet sie einen aktuellen Überblick über Ansätze und Indikatoren zur Messung von Nachhaltigkeit und Wohlstand jenseits des BIP. Bei EarthScore leitet sie den wissenschaftlichen Beirat und stellt sicher, dass Kennzahlen, Modelle und MRV-Methoden zur Messung von CO₂, Energieeffizienz und Kreislaufeffekten auf einem belastbaren, empirisch fundierten Framework basieren – als Brücke zwischen akademischer Forschung und praxisnaher Circular-Intelligence-Plattform."
+      },
+      "item5": {
         "name": "Igor Shtelmakh",
         "position": "Chief Technology Officer",
         "deskPosition": "AI & IT Development Team",
-        "text": "Der aus Vinnytsia, Ukraine, stammende Igor Shtelmakh ist ein hervorragender Technologieführer mit einem Doktortitel in Computerwissenschaften. Als CTO von EarthScore beaufsichtigt er KI- und Softwareentwicklungsinitiativen, bereichert durch seine vorherige Erfahrung als Chief Data Officer bei Widr Pay in Paris. Seine Rolle ist entscheidend, um technologische Innovationen und Softwarelösungen im gesamten Unternehmen voranzutreiben."
-      },
-      "item5": {
-        "name": "Claus Adams",
-        "position": "Senior Advisor",
-        "deskPosition": "Marketing/Sales",
-        "text": "Claus Adams, Experte mit über 20 Jahren Erfahrung in Werbung und Marketing, spezialisiert sich auf nachhaltige Praktiken und technologische Integration. Er hatte Führungspositionen bei Agenturen wie Geometry Global EMEA und Ogilvy inne. Bei EarthScore nutzt er sein Fachwissen, um Markenstrategien zu verfeinern und die Marktdurchdringung im Bereich nachhaltiger Technologien voranzutreiben. Sein Verständnis von Verbraucherverhalten und digitalen Trends unterstützt die Mission von EarthScore, Umweltverantwortung durch innovative Lösungen voranzutreiben."
+        "text": "Igor Shtelmakh ist Informatiker aus Vinnytsia (Ukraine) mit zwei Promotionen in Computer Science und Schwerpunkt auf KI-Modellen. Neben seiner Tätigkeit als CTO von EarthScore forscht und lehrt er an der Universität in Vinnytsia zu modernen AI-Ansätzen und deren praktischer Anwendung. Er verfügt über langjährige Erfahrung im Aufbau datengetriebener Systeme und war unter anderem als Chief Data Officer bei Widr Pay in Paris tätig. Igor hat erfolgreich autonome KI-Agenten und intelligente Automatisierungslösungen entwickelt, die bei großen Online-Plattformen im Einsatz sind. Bei EarthScore verantwortet er die technische Gesamtarchitektur der Circular AI Engine, die Entwicklung der Plattformmodule sowie stabile Daten- und MRV-Pipelines – mit dem Ziel, skalierbare, verlässliche und zukunftsfähige Circular-Intelligence-Lösungen bereitzustellen."
       },
       "item6": {
-        "name": "Gottfried Werner",
-        "position": "Financial Expert",
-        "deskPosition": "Partner",
-        "text": "Gottfried ist ein Experte mit über 20 Jahren Erfahrung in Geschäftsentwicklung, Management, B2B-Vertrieb und strategischen Partnerschaften. Sein Erfolg hat ihm ein breites Netzwerk in Politik und Wirtschaft eingebracht. Er hat große Medien-, Werbe- und Technologieunternehmen beraten und war Geschäftsführer eines führenden Technologieunternehmens im Automobilsektor. Zuvor war er Vorstandsmitglied eines Schweizer Leasingunternehmens und arbeitete bei einem deutschen Projektentwicklungsunternehmen für institutionelle Investoren."
+        "name": "David Jäger",
+        "position": "Product & UX Lead",
+        "deskPosition": "Product Experience Team",
+        "text": "David Jäger arbeitet seit rund 15 Jahren an der Schnittstelle von Produktentwicklung, UX-Design und digitalem Markenauftritt. Nach einem abgeschlossenen Hochschulstudium hat er in zahlreichen Digitalprojekten User Interfaces, Designsysteme und Produktlogiken gestaltet und bis in die Umsetzung begleitet. Als Teil des Kernteams ist er seit Beginn bei EarthScore dabei und verantwortet die Konzeption und Gestaltung sämtlicher Produktoberflächen – von der ESG- und CSRD-Erfassungslogik über Dashboards und Circular-AI-Views bis hin zu Widgets, Pitchdecks und visuellen Stories. Er übersetzt ESG- und Circular-Intelligence-Anforderungen in klare, intuitive Nutzererlebnisse und stellt sicher, dass Frontend- und Softwareentwicklung diese Konzepte präzise umsetzen. Damit bildet er ein zentrales Bindeglied zwischen Fachinhalten, Technologie und Design."
       }
     },
     "screen9": {
@@ -147,5 +147,102 @@
         "btnSent": "Nachricht gesendet"
       }
     }
+  },
+  "cookie": {
+    "cookie_settings": "Cookie Einstellungen",
+    "this_website_uses_cookies": "Diese Website verwendet Cookies",
+    "text_descriptions": "Wir verwenden Cookies, um die Benutzerfreundlichkeit zu verbessern. Wählen Sie aus, welche Cookies Sie zulassen. Weitere Informationen finden Sie in unserer Cookie-Richtlinie",
+    "privacy_policy": "Daten schutzrichtlinie",
+    "btn_accept_all": "akzeptiere alles",
+    "btn_decline_all": "alles ablehnen",
+    "btn_save_close": "Speichern und schließen",
+    "necessary": "unbedingt notwendig ",
+    "performance": "leistung",
+    "targeting": "targeting",
+    "functionality": "funktionalität",
+    "unclassified": "nicht klassifiziert"
+  },
+  "imprint": {
+    "title": "Impressum",
+    "phone": "Telefon",
+    "headquarters": "Zentrale",
+    "email": "Email",
+    "register": "Registergericht",
+    "register_number": "Registernummer",
+    "head": "Geschäftsführer",
+    "identification_number": "USt-ID"
+  },
+  "data_protection": {
+    "title": "Datenschutz",
+    "sub_title_one": "Allgemeine Informationen zur Datenverarbeitung",
+    "sub_title_two": "Verantwortliche Stelle",
+    "info_top": "Dieser Internetauftritt (nachfolgend „Website“) wird bereitgestellt von der WhatsGreen Research & Science GmbH (nachfolgend „uns“ oder „wir“).",
+    "info_bottom": "Im Folgenden möchten wir Sie in verständlicher und kompakter Form über die Erhebung und Verarbeitung Ihrer Daten sowie Ihre diesbezüglichen Rechte unterrichten.",
+    "section_1": "Welche Daten werden genutzt",
+    "section_1_text": "Wir verarbeiten personenbezogene Daten, die wir im Rahmen unserer Geschäftsbeziehung von unseren Kunden oder anderen Betroffenen erhalten.",
+    "section_2": "Zu welchem Zweck werden Ihre Daten verarbeitet und auf welcher Rechtsgrundlage?",
+    "section_2_text": "Wir verarbeiten personenbezogene Daten im Einklang mit den Bestimmungen der EU-Datenschutzgrundverordnung (DSGVO) und dem Bundesdatenschutzgesetz (BDSG).",
+    "section_2_1_text": "zur Erfüllung vertraglicher Pflichten (Art. 6 Abs. 1 lit. b DSGVO)",
+    "section_2_2_text": "Die Verarbeitung von Daten erfolgt zur Erfüllung von Verträgen oder zur Durchführung vorvertraglicher Maßnahmen, die auf Ihre Anfrage hin erfolgen.",
+    "section_2_3_text": "aufgrund eines berechtigten Interesses (Art. 6 Abs. 1 lit. f DSGVO)",
+    "section_2_4_text": "Soweit erforderlich werden Ihre Daten über die vorstehenden Zwecke hinaus zur Wahrung berechtigter Interessen verarbeitet.",
+    "section_2_5_text": "Verbesserung und Weiterentwicklung des Angebots",
+    "section_2_6_text": "Kommunikation mit Kunden, Interessenten und Nutzern innerhalb sozialer Netzwerke und Plattformen",
+    "section_2_7_text": "Werbung oder Markt- und Meinungsforschung soweit Sie der Nutzung Ihrer Daten nicht widersprochen haben",
+    "section_2_8_text": "Geltendmachung rechtlicher Ansprüche und Verteidigung bei rechtlichen Streitigkeiten",
+    "section_2_9_text": "Gewährleistung der IT-Sicherheit und des IT-Betriebs der Website",
+    "section_2_10_text": "Maßnahmen zur Gebäude- und Anlagensicherheit (z.B. Zutrittskontrollen)",
+    "section_2_11_text": "aufgrund Ihrer Einwilligung (Art. 6 Abs. 1 a DSGVO)",
+    "section_2_12_text": "Soweit Sie uns eine Einwilligung zur Verarbeitung von personenbezogenen Daten für bestimmte Zwecke (z.B. Newsletter-Versand) erteilt haben, ist die Rechtmäßigkeit dieser Verarbeitung auf Basis Ihrer Einwilligung gegeben. Eine erteilte Einwilligung kann jederzeit widerrufen werden. Wenden Sie sich hierzu an die unter Ziffer 7 genannte Adresse.",
+    "section_2_13_text": "Dies gilt auch für den Widerruf von Einwilligungserklärungen, die vor der Geltung der DSGVO, also vor dem 25. Mai 2018, uns gegenüber erteilt worden sind. Der Widerruf einer Einwilligung wirkt erst für die Zukunft und berührt nicht die Rechtmäßigkeit der bis zum Widerruf verarbeiteten Daten.",
+    "section_3": "Wer bekommt Ihre Daten",
+    "section_3_text": "Zur Verarbeitung Ihrer Daten setzen wir zum Teil spezialisierte Dienstleister ein. Sie erhalten von uns nur die personenbezogenen Daten, die sie für ihre konkrete Tätigkeit benötigen. Die Dienstleister werden von uns sorgfältig ausgewählt und regelmäßig kontrolliert. Sie verarbeiten personenbezogene Daten nur im Auftrag und strikt nach unseren Weisungen auf der Grundlage entsprechender Verträge über eine Auftragsverarbeitung.",
+    "section_4": "Werden Ihre Daten außerhalb der EU verarbeitet",
+    "section_4_text": "Ihre Daten werden zum Teil auch in Ländern außerhalb der Europäischen Union („EU“) oder des Europäischen Wirtschaftsraums („EWR“) verarbeitet, wo generell ein geringeres Datenschutzniveau herrschen könnte als in Europa. In diesen Fällen stellen wir z.B. über vertragliche Vereinbarungen mit den Vertragspartnern sicher, dass ein ausreichendes Datenschutzniveau für Ihre Daten gewährleistet ist, oder wir bitten Sie um Ihre ausdrückliche Einwilligung.",
+    "section_4_1_text": "Wir weisen darauf hin, dass bei der Nutzung unserer Onlinepräsenzen innerhalb sozialer Netzwerke und Plattformen eine Verarbeitung von Daten außerhalb des Raumes der Europäischen Union stattfinden kann. Hierdurch können sich für Nutzer Risiken wie etwa eine erschwerte Durchsetzung von Betroffenenrechten ergeben.",
+    "section_4_2_text": " Für eine detaillierte Darstellung der jeweiligen Verarbeitungen und der Widerspruchsmöglichkeiten (Opt-Out), verweisen wir auf den jeweiligen Anbieter der sozialen Netzwerke und Plattformen. Auskunftsverlangen und weitere Betroffenenrechte können am effektivsten gegenüber dem jeweiligen Anbieter geltend gemacht werden. Nur diese haben Zugriff auf die Daten der Nutzer und können Auskunft erteilen sowie entsprechende Maßnahmen ableiten.",
+    "section_5": "Wie lange werden Ihre Daten gespeichert",
+    "section_5_text": "Wir verarbeiten und speichern Ihre personenbezogenen Daten solange dies für die Erfüllung ihrer vertraglichen und gesetzlichen Pflichten erforderlich ist.",
+    "section_5_1_text": "Sind die Daten für die Erfüllung vertraglicher oder gesetzlicher Pflichten nicht mehr erforderlich, werden diese regelmäßig gelöscht, es sei denn, deren – befristete – Weiterverarbeitung ist erforderlich zu folgenden Zwecken:",
+    "section_5_2_text": " – Erfüllung handels- und steuerrechtlicher Aufbewahrungspflichten, die sich z.B. ergeben können aus: Handelsgesetzbuch (HGB) und Abgabenordnung (AO). Die dort vorgegebenen Fristen zur Aufbewahrung bzw. Dokumentation betragen in der Regel zwei bis zehn Jahre.",
+    "section_5_3_text": "– Erhaltung von Beweismitteln im Rahmen der gesetzlichen Verjährungsvorschriften. Nach den §§ 195 ff. des Bürgerlichen Gesetzbuches (BGB) können diese Verjährungsfristen bis zu 30 Jahre betragen, wobei die regelmäßige Verjährungsfrist 3 Jahre beträgt.",
+    "section_6": "Welche Rechte haben Sie",
+    "section_6_text": "Sie können unter der in Ziffer 7 genannten Adresse Auskunft, über die zu Ihrer Person von uns gespeicherten Daten verlangen. Darüber hinaus können Sie unter bestimmten Voraussetzungen die Berichtigung oder die Löschung Ihrer Daten verlangen. Weiterhin steht Ihnen ein Recht auf Einschränkung der Verarbeitung Ihrer Daten sowie ein Recht auf Herausgabe der von Ihnen bereitgestellten Daten in einem strukturierten, gängigen und maschinenlesbaren Format zu.",
+    "section_6_1_text": "Beruht eine Datenverarbeitung auf einer von Ihnen erteilten Einwilligung, können Sie diese Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen. Bitte richten Sie Ihren Widerruf an die unter Ziffer 7 genannte Adresse.",
+    "section_6_2_text": "Erfolgt eine Datenverarbeitung aufgrund überwiegender berechtigter Interessen können Sie dieser Datenverarbeitung widersprechen, wenn dies Ihre besondere Situation rechtfertigt. Bitte richten Sie Ihren Widerspruch an die unter Ziffer 7 genannte Adresse.",
+    "section_6_3_text": "Ihnen steht auch das Recht auf Beschwerde bei der zuständigen Aufsichtsbehörde zu",
+    "section_6_4_text": "Landesbeauftragte für Datenschutz und Informationsfreiheit",
+    "section_6_5_text": "Nordrhein-Westfalen",
+    "section_6_6_text": "Postfach",
+    "section_7": "Wer ist für die Datenverarbeitung verantwortlich und wie können Sie den Datenschutzbeauftragten erreichen",
+    "section_7_text": "Den Datenschutzbeauftragten erreichen Sie per Post unter der nachstehenden Adresse",
+    "section_7_1_text": "Datenschutzbeauftragter",
+    "section_7_2_text": "oder per Mail unter",
+    "section_8": "Welche Datenverarbeitung findet auf der Website statt",
+    "section_8_text": "Beim Besuch der Website finden folgende Datenverarbeitungen statt",
+    "section_8_1_text": "Von jedem Besucher der Website werden Angaben zu Zeitpunkt, Dauer und Umfang der genutzten Seiten sowie Angaben zum zugreifenden Computer/Mobilgerät wie",
+    "ip_address": "IP-Adresse",
+    "date_and_time": "Datum und Uhrzeit der Anfrage",
+    "time_zone": "Zeitzonendifferenz zur Greenwich Mean Time (GMT)",
+    "content_request": "Inhalt der Anforderung (konkrete Seite)",
+    "operating_system": "Betriebssystem und dessen Zugriffsstatus / HTTP-Statuscode",
+    "amount_data_transferred": "Übertragene Datenmenge",
+    "website_from_which_request": "Website, von der die Anforderung kommt",
+    "browser_language_and_version": "Browser, Sprache und Version der Browsersoftware erhoben.",
+    "section_8_2_text": "Die Erhebung erfolgt pseudonymisiert und wird verwendet, um anonyme Informationen über die Art und Weise der Seitennutzung zu erzeugen und das Inhaltsangebot auf Nutzer besser abzustimmen. Die Verarbeitung beruht auf § 15 TMG und umfasst die Übermittlung pseudonymisierter Daten ins Nicht-EU Ausland (USA).",
+    "section_8_3_text": "Zu jeder einzelnen Methode werden unterschiedliche Dienste eingesetzt und es besteht ein individuelles Widerspruchsrecht",
+    "google_analytics": "Google Analytics",
+    "section_8_4_text": "Die Website verwendet Google Analytics, einen Webanalysedienst der Google Inc., 1600 Amphitheatre Parkway, Mountain View, CA 94043, United States („Google“). Google analysiert in unserem Auftrag die Nutzung dieser Website. Hierfür verwenden wir u.a. Cookies. Die dabei von Google erhobenen Informationen über die Nutzung dieser Website (z.B. die verweisende URL, bei uns besuchte Seiten, verwendete Webbrowser, Spracheinstellung, verwendetes Betriebssystem oder Bildschirmauflösung) werden an einen Server von Google in die USA übertragen, dort gespeichert, analysiert und das Ergebnis uns in anonymisierter Form zur Verfügung gestellt. Ihre Nutzungsdaten werden dabei nicht mit Ihrer vollen IP-Adresse verbunden. Wir haben auf dieser Website die von Google angebotene IP-Anonymisierungsfunktion aktiviert, sodass das letzte Oktett (Typ IPv4) bzw. die letzten 80 Bits (Typ IPv6) Ihrer IP-Adresse gelöscht werden. Google ist zudem im EU-US Privacy Shield zertifiziert, sodass für Daten bei Google in den USA ein angemessenes Datenschutzniveau hergestellt ist. Sie können Ihre erteilte Einwilligung zur Webanalyse jederzeit widersprechen, indem Sie entweder das verfügbare Browser-Plugin von Google herunterladen und installieren oder hier klicken.",
+    "section_8_5_text": "Beide Möglichkeiten verhindern eine Webanalyse nur solange, wie Sie einen Browser nutzen, auf dem Sie das Plugin installiert haben bzw. solange Sie das Opt-Out-Cookie nicht löschen. Weitere Informationen zu Google Analytics erhalten Sie in den Google Analytics Nutzungsbedingungen, in den Sicherheits- und Datenschutzgrundsätzen von Google Analytics sowie in der Google Datenschutzerklärung.",
+    "google_maps": "Google Maps",
+    "section_8_6_text": "Bei jedem einzelnen Aufruf der Komponente “Google Maps” wird von Google ein Cookie gesetzt, um bei der Anzeige der Seite, auf der die Komponente “Google Maps” integriert ist, Nutzereinstellungen und -daten zu verarbeiten. Dieses Cookie wird im Regelfall nicht durch das Schließen des Browsers gelöscht, sondern läuft nach einer bestimmten Zeit ab, soweit es nicht von Ihnen zuvor manuell gelöscht wird. Wenn Sie mit dieser Verarbeitung Ihrer Daten nicht einverstanden sind, so besteht die Möglichkeit, den Service von “Google Maps” zu deaktivieren und auf diesem Weg die Übertragung von Daten an Google zu verhindern. Dazu müssen Sie die Java-Script-Funktion in Ihrem Browser deaktivieren. Wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall “Google Maps” nicht oder nur eingeschränkt nutzen können. Die Nutzung von “Google Maps” und der über “Google Maps” erlangten Informationen erfolgt gemäß den Google-Nutzungsbedingungen google.de/intl/de/policies/terms/regional.html sowie der zusätzlichen Geschäftsbedingungen für „Google Maps“ google.com/intl/de_de/help/terms_maps.html.",
+    "contact_form": "Kontaktformular",
+    "section_8_7_text": "Bei der Kontaktaufnahme per Kontaktformular werden die Angaben des Nutzers zur Bearbeitung der Kontaktanfrage und deren Abwicklung gem. Art. 6 Abs. 1 lit. b) DSGVO verarbeitet. Die Angaben der Nutzer können in einem Customer-Relationship-Management System („CRM System“) oder vergleichbarer",
+    "inquiries": "Anfragenorganisation gespeichert werden.",
+    "section_8_8_text": "Die Anfragen werden gelöscht, sofern diese nicht mehr erforderlich sind. Wir überprüfen die Erforderlichkeit alle zwei Jahre; ferner gelten die gesetzlichen Archivierungspflichten.",
+    "section_9": "Anpassung der Datenschutzerklärung",
+    "section_9_text": "Wir behalten uns vor, diese Datenschutzerklärung von Zeit zu Zeit zu aktualisieren. Aktualisierungen dieser Datenschutzerklärung werden auf unserer Website veröffentlicht. Änderungen gelten ab ihrer Publikation auf unserer Website. Wir empfehlen Ihnen daher, diese Seite regelmäßig zu besuchen, um sich über gegebenenfalls erfolgte Aktualisierungen zu informieren.",
+    "stand": "Stand",
+    "month": "Februar"
   }
 }

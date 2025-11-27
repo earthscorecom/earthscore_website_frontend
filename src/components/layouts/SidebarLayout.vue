@@ -49,13 +49,18 @@
   </div>
 </template>
 <script setup lang="ts">
+// import libraries and references
+import { useI18n } from 'vue-i18n'
+import { computed } from 'vue'
+
+// import stores
+import { useWidth } from '@/composables/useWidth'
 import { toBlock } from '@/utils/toBlock'
+
+// import components
 import ContactList from '@/components/ContactList.vue'
 import CloseIcon from '@/components/icons/CloseIcon.vue'
 import LangIcon from '@/components/icons/LangIcon.vue'
-import { useI18n } from 'vue-i18n'
-import { computed } from 'vue'
-import { useWidth } from '@/composables/useWidth'
 
 const EN_LOCALE = 'en'
 const DE_LOCALE = 'de'

@@ -1,5 +1,5 @@
 <template>
-  <div id="slider-consumer">
+  <div>
     <div class="hidden lg:block">
       <SliderDesktop :contentList="contentList"></SliderDesktop>
     </div>
@@ -9,20 +9,25 @@
   </div>
 </template>
 <script setup lang="ts">
-import SliderDesktop from './components/SliderDesktop.vue'
-import SliderMobile from './components/SliderMobile.vue'
-import Img1 from '@/assets/img/B2B_1.png'
-import Img2 from '@/assets/img/B2B_2.png'
-import Img3 from '@/assets/img/B2B_3.png'
-import Img4 from '@/assets/img/B2B_4.png'
-import Img5 from '@/assets/img/B2B_5.png'
-import ImgMobi1 from '@/assets/img/b2b-mob-1.png'
-import ImgMobi2 from '@/assets/img/b2b-mob-2.png'
-import ImgMobi3 from '@/assets/img/b2b-mob-3.png'
-import ImgMobi4 from '@/assets/img/b2b-mob-4.png'
-import ImgMobi5 from '@/assets/img/b2b-mob-5.png'
+// import libraries and references
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
+
+// import stores
+
+// import components
+import SliderDesktop from './components/SliderDesktop.vue'
+import SliderMobile from './components/SliderMobile.vue'
+import Img1 from '@/assets/img/B2B_1.svg'
+import Img2 from '@/assets/img/B2B_2.svg'
+import Img3 from '@/assets/img/B2B_3.svg'
+import Img4 from '@/assets/img/B2B_4.svg'
+import Img5 from '@/assets/img/B2B_5.svg'
+import ImgMobi1 from '@/assets/img/b2b-mob-1.svg'
+import ImgMobi2 from '@/assets/img/b2b-mob-2.svg'
+import ImgMobi3 from '@/assets/img/b2b-mob-3.svg'
+import ImgMobi4 from '@/assets/img/b2b-mob-4.svg'
+import ImgMobi5 from '@/assets/img/b2b-mob-5.svg'
 
 const { t } = useI18n({ useScope: 'global' })
 
