@@ -33,8 +33,8 @@ import { useI18n } from 'vue-i18n'
 import CookieSettings from '@/global/CookieSettings.vue'
 import BaseModal from '@/global/BaseModal.vue'
 import ImgCookie from '@/assets/img/cookie.svg'
-import CookieConfigModal from './CookieConfigModal.vue'
-import LocaleLanguageSwitcher from './LocaleLanguageSwitcher.vue'
+import CookieConfigModal from './components/CookieConfigModal.vue'
+import LocaleLanguageSwitcher from './components/LocaleLanguageSwitcher.vue'
 
 const { t } = useI18n({ useScope: 'global' })
 

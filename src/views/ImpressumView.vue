@@ -11,7 +11,7 @@
         </div>
 
         <div class="text-base mb-6">
-          <p>{{ t('imprint.phone') }}: +49 (0)223 4786954 ({{ t('imprint.headquarters') }})</p>
+          <p>{{ t('imprint.phone') }}: +49 (0)2238 4784075 ({{ t('imprint.headquarters') }})</p>
           <p>{{ t('imprint.email') }}: info@earthscore.com</p>
         </div>
 
