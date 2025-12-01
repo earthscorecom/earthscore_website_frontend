@@ -59,7 +59,7 @@ import { toBlockWithPromise } from '@/utils/toBlock'
 import ImgLogo from '@/assets/img/header-logo.svg'
 import BackArrow from '@/components/icons/BackArrow.vue'
 
-import CookieConfigs from '@/components/CookieSettings/components/CookieConfigs.vue'
+import CookieConfigs from '@/components/CookieSettings/CookieConfigs.vue'
 
 const { t } = useI18n({ useScope: 'global' })
 
