@@ -4,7 +4,7 @@
     :class="{ 'pr-0 lg:pr-2 w-[34.5pt] lg:w-full ': isHovered }"
     @mouseenter="onHover(true)"
     @mouseleave="onHover(false)"
-    @click="$emit('isOpen', true)"
+    @click="$emit('isOpen')"
   >
     <img :src="imgCookie" alt="Cookie" />
     <div
@@ -33,7 +33,7 @@ withDefaults(
   }
 )
 defineEmits<{
-  (event: 'isOpen', value: boolean): void
+  (event: 'isOpen', value?: boolean): void
 }>()
 
 const isHovered = ref<boolean>(false)

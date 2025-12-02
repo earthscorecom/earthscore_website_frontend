@@ -3,12 +3,12 @@
     <CookieSettings
       :img-cookie="ImgCookie"
       :title="t('cookie.cookie_settings')"
-      @is-open="toggleModal"
+      @is-open="toggleModalCookie"
     />
     <BaseModal
-      :is-visible="showModal"
+      :is-visible="showModalCookie"
       :title="t('cookie.this_website_uses_cookies')"
-      @close="toggleModal"
+      @close="toggleModalCookie"
     >
       <template #header>
         <div class="mr-2">
@@ -16,7 +16,7 @@
         </div>
       </template>
       <template #default>
-        <CookieConfigModal @close="toggleModal" />
+        <CookieConfigModal @close="toggleModalCookie" />
       </template>
     </BaseModal>
   </div>
@@ -24,10 +24,10 @@
 
 <script setup lang="ts">
 // import libraries and references
-import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 // import stores
+import { useCookies } from '@/composables/useCookies'
 
 // import components
 import CookieSettings from '@/global/CookieSettings.vue'
@@ -37,10 +37,5 @@ import CookieConfigModal from './components/CookieConfigModal.vue'
 import LocaleLanguageSwitcher from './components/LocaleLanguageSwitcher.vue'
 
 const { t } = useI18n({ useScope: 'global' })
-
-const showModal = ref<boolean>(false)
-
-const toggleModal = (): void => {
-  showModal.value = !showModal.value
-}
+const { showModalCookie, toggleModalCookie } = useCookies()
 </script>
