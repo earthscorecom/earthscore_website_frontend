@@ -54,6 +54,7 @@ import { useI18n } from 'vue-i18n'
 
 // import stores
 import { toBlockWithPromise } from '@/utils/toBlock'
+import { useCookies } from '@/composables/useCookies'
 
 // import components
 import ImgLogo from '@/assets/img/header-logo.svg'
@@ -62,6 +63,7 @@ import BackArrow from '@/components/icons/BackArrow.vue'
 import CookieConfigs from '@/components/CookieSettings/CookieConfigs.vue'
 
 const { t } = useI18n({ useScope: 'global' })
+const { toggleModalCookie } = useCookies()
 
 const isScrolled = ref<boolean>(false)
 const isClicked = ref<boolean>(false)
@@ -98,10 +100,20 @@ const onClick = async (): Promise<void> => {
   isClicked.value = true
 }
 
+const checkAtSaveCookieToLocalStorage = () => {
+  const cookies: string | null = localStorage.getItem('cookies_key')
+  if (!cookies) {
+    setTimeout(() => {
+      toggleModalCookie()
+    }, 3000)
+  }
+}
+
 onMounted((): void => {
   handleScroll()
   window.addEventListener('scroll', handleScroll)
   document.addEventListener('scroll', initializeObserver)
+  checkAtSaveCookieToLocalStorage()
 })
 
 onUnmounted((): void => {

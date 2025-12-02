@@ -117,7 +117,7 @@ const hasRightSaveCookies = computed<boolean>(
 const reSizeBlockModal = computed<string>(() => (activeDetailsCookie.value ? 'w-[450pt]' : 'w-72'))
 
 const getConsent = (): void => {
-  const cookies: string | null = localStorage.getItem('STORAGE_KEY')
+  const cookies: string | null = localStorage.getItem('cookies_key')
   if (cookies) {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { date, ...rest } = JSON.parse(cookies)
@@ -136,7 +136,7 @@ const setAllToWithKeys = (value: boolean): void => {
 
 const saveCookies = (): void => {
   const cookies: CookieOptions = { ...preferences, date: new Date().toISOString() }
-  localStorage.setItem('STORAGE_KEY', JSON.stringify(cookies))
+  localStorage.setItem('cookies_key', JSON.stringify(cookies))
   emit('close')
 }
 const setAll = (): void => {
