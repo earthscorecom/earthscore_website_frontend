@@ -41,7 +41,7 @@
       <BackArrow></BackArrow>
       <span class="pl-1"> {{ t('header.btnBack') }}</span>
     </RouterLink>
-    <div class="fixed z-[9999] bottom-24 left-12">
+    <div class="fixed z-[9999] bottom-24 left-2">
       <CookieConfigs />
     </div>
   </header>
