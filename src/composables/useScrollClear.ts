@@ -5,15 +5,16 @@ export const useScrollClear = () => {
     let observer: IntersectionObserver | null = null
 
     onMounted(() => {
-      const targetElement = targetRef.value
+      const targetElement: HTMLElement | null = targetRef.value
 
       if (!targetElement) return
 
       observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
+        (entries: IntersectionObserverEntry[]) => {
+          entries.forEach((entry: IntersectionObserverEntry) => {
             if (!entry.isIntersecting) {
               callBack()
+              Object.values(entry.target).forEach((element: HTMLElement) => element.blur())
             }
           })
         },

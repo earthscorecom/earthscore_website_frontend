@@ -13,7 +13,7 @@
             type="text"
             class="block px-0 mt-2 w-full text-sm pb-1 text-gray-900 bg-transparent border-0 border-b border-black-N900 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             :placeholder="t('homePage.screen9.form.placeholderName')"
-            name="contact_name"
+            name="name"
           />
           <div class="w-full h-4 mt-1 text-xs text-warning-R300">{{ nameError }}</div>
         </div>
@@ -28,7 +28,7 @@
             type="text"
             class="block px-0 mt-2 w-full text-sm pb-1 text-gray-900 bg-transparent border-0 border-b border-black-N900 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             :placeholder="t('homePage.screen9.form.placeholderEmail')"
-            name="contact_email"
+            name="email"
           />
           <div class="w-full h-4 mt-1 text-xs text-warning-R300">{{ emailError }}</div>
         </div>
@@ -42,10 +42,9 @@
         >
         <textarea
           v-model.trim="message"
-          id="message"
           rows="4"
           class="block p-2.5 w-full text-sm text-gray-900 rounded-md border border-black-N900 focus:ring-blue-500 focus:outline-blue-600"
-          name="contact_description"
+          name="message"
         ></textarea>
         <div class="w-full h-4 mt-1 text-xs text-warning-R300">{{ messageError }}</div>
       </div>

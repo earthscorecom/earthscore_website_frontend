@@ -10,7 +10,7 @@
           <p>Rommerskirchener Str. 21</p>
           <p>50259 Pulheim</p>
           <p class="pb-4">Deutschland</p>
-          <p>Telefon: +49 (0)223 4786954 (Zentrale)</p>
+          <p>Telefon: +49 (0)2238 4784075 (Zentrale)</p>
           <p class="pb-4">Email: info@earthscore.com</p>
 
           <p class="pb-4">

@@ -1,10 +1,14 @@
 <template>
-  <div :class="reSizeBlockModal">
+  <div :class="[reSizeBlockModal, 'transition-all duration-300 ease-in-out']">
     <div>
       <p class="text-xs">
         {{ t('cookie.text_descriptions') }}
         <span>
-          <router-link :to="{ name: 'privacy-policy' }" class="underline text-primary-A300">
+          <router-link
+            :to="{ name: 'privacy-policy' }"
+            class="underline text-primary-A300"
+            @click="closeModal"
+          >
             {{ t('cookie.privacy_policy') }}
           </router-link>
         </span>
@@ -43,12 +47,21 @@
         @click="declineAll"
       />
     </div>
+    <div class="w-full">
+      <div class="wrapper" @click="toggleActiveDetailsCookie">
+        <ImageIcon icon="heroicons:cog-6-tooth" class="active-image" />
+        <div class="wrapper__content active-content">
+          {{ activeDetailsCookie ? t('cookie.hide_details') : t('cookie.show_details') }}
+        </div>
+      </div>
+      <DetailsCookie v-if="activeDetailsCookie" @isClose="closeModal" />
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
 // import libraries and references
-import { onMounted, reactive, computed } from 'vue'
+import { onMounted, reactive, computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useForm } from 'vee-validate'
 
@@ -58,6 +71,8 @@ import { useForm } from 'vee-validate'
 import BaseButton from '@/global/BaseButton.vue'
 import BaseCheckbox from '@/global/BaseCheckbox.vue'
 import type { CheckboxValue } from '@/global/BaseCheckbox.vue'
+import ImageIcon from '@/global/ImageIcon.vue'
+import DetailsCookie from './DetailsCookie.vue'
 
 const { t } = useI18n({ useScope: 'global' })
 
@@ -85,6 +100,8 @@ const preferences = reactive<CookiePreferences>({
   unclassified: false
 })
 
+const activeDetailsCookie = ref<boolean>(false)
+
 const { meta } = useForm({
   initialValues: preferences as CookiePreferences
 })
@@ -97,13 +114,10 @@ const preferencesReducedObject = computed<CookiePreferencesWithoutNecessary>(() 
 const hasRightSaveCookies = computed<boolean>(
   () => Object.values(preferencesReducedObject.value).includes(true) || meta.value.dirty
 )
-const reSizeBlockModal = computed<string>(() => {
-  const lang: string | null = localStorage.getItem('lang')
-  return lang === 'en' ? 'w-72' : 'w-80'
-})
+const reSizeBlockModal = computed<string>(() => (activeDetailsCookie.value ? 'w-[450pt]' : 'w-72'))
 
 const getConsent = (): void => {
-  const cookies: string | null = localStorage.getItem('STORAGE_KEY')
+  const cookies: string | null = localStorage.getItem('cookies_key')
   if (cookies) {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { date, ...rest } = JSON.parse(cookies)
@@ -122,7 +136,7 @@ const setAllToWithKeys = (value: boolean): void => {
 
 const saveCookies = (): void => {
   const cookies: CookieOptions = { ...preferences, date: new Date().toISOString() }
-  localStorage.setItem('STORAGE_KEY', JSON.stringify(cookies))
+  localStorage.setItem('cookies_key', JSON.stringify(cookies))
   emit('close')
 }
 const setAll = (): void => {
@@ -137,8 +151,32 @@ const changeValue = (value: boolean, key: KeyPreferences): void => {
   preferences[key] = value
   meta.value.dirty = true
 }
+const toggleActiveDetailsCookie = (): void => {
+  activeDetailsCookie.value = !activeDetailsCookie.value
+}
+const closeModal = (): void => {
+  setTimeout(() => {
+    emit('close')
+  }, 300)
+}
 
 onMounted((): void => {
   getConsent()
 })
 </script>
+<style scoped lang="scss">
+.wrapper {
+  @apply flex gap-2 justify-center items-center my-4 cursor-pointer;
+  &__content {
+    @apply opacity-70 uppercase text-xs;
+  }
+  &:hover {
+    .active-content {
+      @apply opacity-100;
+    }
+    .active-image {
+      @apply text-primary-A300;
+    }
+  }
+}
+</style>
