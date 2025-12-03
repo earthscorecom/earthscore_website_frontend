@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Listbox v-model="currentLanguage">
+    <Listbox v-model="locale">
       <div class="relative z-[22]">
         <ListboxButton
           class="relative w-full flex items-center cursor-pointer space-x-[6px] rtl:space-x-reverse"
@@ -49,7 +49,6 @@
 
 <script setup lang="ts">
 // import libraries and references
-import { ref } from 'vue'
 import { Listbox, ListboxButton, ListboxOptions, ListboxOption } from '@headlessui/vue'
 import { useI18n } from 'vue-i18n'
 
@@ -61,11 +60,9 @@ import ImageIcon from '@/global/ImageIcon.vue'
 const { locale } = useI18n({ useScope: 'global' })
 
 const languagesList: string[] = ['en', 'de']
-const currentLanguage = ref<string | null>(localStorage.getItem('lang'))
 
 const switchLanguage = (newLanguage: string): void => {
-  currentLanguage.value = newLanguage
   locale.value = newLanguage
-  localStorage.setItem('lang', currentLanguage.value)
+  localStorage.setItem('lang', locale.value)
 }
 </script>

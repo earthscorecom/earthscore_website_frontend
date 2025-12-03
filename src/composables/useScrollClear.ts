@@ -1,7 +1,7 @@
 import { onMounted, onUnmounted, type Ref } from 'vue'
 
 export const useScrollClear = () => {
-  const scrollClearForm = (targetRef: Ref<HTMLElement | null>, callBack: () => void) => {
+  const scrollClearForm = (targetRef: Ref<HTMLElement | null>, callBack: () => void): void => {
     let observer: IntersectionObserver | null = null
 
     onMounted(() => {
