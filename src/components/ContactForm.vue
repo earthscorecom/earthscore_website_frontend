@@ -14,6 +14,7 @@
             class="block px-0 mt-2 w-full text-sm pb-1 text-gray-900 bg-transparent border-0 border-b border-black-N900 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             :placeholder="t('homePage.screen9.form.placeholderName')"
             name="name"
+            @click="initialStateIsSent"
           />
           <div class="w-full h-4 mt-1 text-xs text-warning-R300">{{ nameError }}</div>
         </div>
@@ -29,6 +30,7 @@
             class="block px-0 mt-2 w-full text-sm pb-1 text-gray-900 bg-transparent border-0 border-b border-black-N900 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             :placeholder="t('homePage.screen9.form.placeholderEmail')"
             name="email"
+            @click="initialStateIsSent"
           />
           <div class="w-full h-4 mt-1 text-xs text-warning-R300">{{ emailError }}</div>
         </div>
@@ -45,6 +47,7 @@
           rows="4"
           class="block p-2.5 w-full text-sm text-gray-900 rounded-md border border-black-N900 focus:ring-blue-500 focus:outline-blue-600"
           name="message"
+          @click="initialStateIsSent"
         ></textarea>
         <div class="w-full h-4 mt-1 text-xs text-warning-R300">{{ messageError }}</div>
       </div>
@@ -140,6 +143,10 @@ const { value: message, errorMessage: messageError } = useField<string>('message
 
 const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
 
+const initialStateIsSent = (): void => {
+  isSent.value = false
+}
+
 const onSubmit = handleSubmit(async () => {
   console.log(values)
   isLoading.value = true
@@ -149,5 +156,7 @@ const onSubmit = handleSubmit(async () => {
   isSent.value = true
 })
 
-scrollClearForm(targetBlockRef, resetForm)
+scrollClearForm(targetBlockRef, () => {
+  resetForm(), initialStateIsSent()
+})
 </script>
