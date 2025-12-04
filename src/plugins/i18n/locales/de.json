@@ -144,7 +144,14 @@
         "email": "Email",
         "message": "Ihre Nachricht",
         "btn": "Nachricht senden",
-        "btnSent": "Nachricht gesendet"
+        "btnSent": "Nachricht gesendet",
+        "name_required_field": "name ist ein pflichtfeld",
+        "email_required_field": "e-mail-adresse ist ein pflichtfeld",
+        "message_required_field": "die nachricht ist ein pflichtfeld.",
+        "name_min": "der name muss mindestens 2 zeichen lang sein",
+        "name_max": "der name darf maximal 30 zeichen lang sein",
+        "email_must_be_valid_email": "die e-mail-adresse muss gültig sein",
+        "message_must_min": "die nachricht muss mindestens 2 zeichen lang sein"
       }
     }
   },
