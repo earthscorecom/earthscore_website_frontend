@@ -3,7 +3,7 @@
     <CookieSettings
       :img-cookie="ImgCookie"
       :title="t('cookie.cookie_settings')"
-      @is-open="toggleModalCookie"
+      @is-open="($evt: boolean) => toggleModalCookie($evt)"
     />
     <BaseModal
       :is-visible="showModalCookie"

@@ -104,7 +104,7 @@ const checkAtSaveCookieToLocalStorage = () => {
   const cookies: string | null = localStorage.getItem('cookies_key')
   if (!cookies) {
     setTimeout(() => {
-      toggleModalCookie()
+      toggleModalCookie(true)
     }, 3000)
   }
 }
