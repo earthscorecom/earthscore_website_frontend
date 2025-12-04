@@ -144,7 +144,14 @@
         "email": "Email",
         "message": "Your message here",
         "btn": "Send message",
-        "btnSent": "Message sent"
+        "btnSent": "Message sent",
+        "name_required_field": "name is a required field",
+        "email_required_field": "email is a required field",
+        "message_required_field": "message is a required field",
+        "name_min": "name must be at least 2 characters",
+        "name_max": "name must be at most 30 characters",
+        "email_must_be_valid_email": "email must be a valid email",
+        "message_must_min": "message must be at least 2 characters"
       }
     }
   },

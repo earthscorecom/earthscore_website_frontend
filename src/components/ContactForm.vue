@@ -1,5 +1,5 @@
 <template>
-  <form @submit.prevent="onSubmit" ref="targetBlockRef" action="" class="flex justify-center">
+  <form @submit.prevent="onSubmit" action="" class="flex justify-center">
     <div class="md:max-w-[546px] w-full">
       <div class="grid md:grid-cols-2 gap-5">
         <div class="relative z-0">
@@ -14,7 +14,6 @@
             class="block px-0 mt-2 w-full text-sm pb-1 text-gray-900 bg-transparent border-0 border-b border-black-N900 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             :placeholder="t('homePage.screen9.form.placeholderName')"
             name="name"
-            @click="initialStateIsSent"
           />
           <div class="w-full h-4 mt-1 text-xs text-warning-R300">{{ nameError }}</div>
         </div>
@@ -30,7 +29,6 @@
             class="block px-0 mt-2 w-full text-sm pb-1 text-gray-900 bg-transparent border-0 border-b border-black-N900 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             :placeholder="t('homePage.screen9.form.placeholderEmail')"
             name="email"
-            @click="initialStateIsSent"
           />
           <div class="w-full h-4 mt-1 text-xs text-warning-R300">{{ emailError }}</div>
         </div>
@@ -47,7 +45,6 @@
           rows="4"
           class="block p-2.5 w-full text-sm text-gray-900 rounded-md border border-black-N900 focus:ring-blue-500 focus:outline-blue-600"
           name="message"
-          @click="initialStateIsSent"
         ></textarea>
         <div class="w-full h-4 mt-1 text-xs text-warning-R300">{{ messageError }}</div>
       </div>
@@ -56,8 +53,8 @@
         type="submit"
         :class="{
           'bg-primary-A300': !isSent,
-          'bg-primary-A600': isSent,
-          'pointer-events-none cursor-not-allowed select-none opacity-60': !hasRightSendMessage
+          'bg-primary-A600 pointer-events-none cursor-not-allowed select-none opacity-60':
+            isLoading || isSent
         }"
         class="text-white group border text-center flex justify-center transition-all text-lg rounded-lg px-4 py-2 mt-10 min-w-[150px]"
       >
@@ -105,10 +102,8 @@ import { useField, useForm } from 'vee-validate'
 import * as yup from 'yup'
 
 // import stores
-import { useScrollClear } from '@/composables/useScrollClear'
 
 const { t } = useI18n({ useScope: 'global' })
-const { scrollClearForm } = useScrollClear()
 
 type UserFormOption = {
   name: string
@@ -118,23 +113,32 @@ type UserFormOption = {
 
 const isLoading = ref(false)
 const isSent = ref(false)
-const targetBlockRef = ref<HTMLElement | null>(null)
 
-const hasRightSendMessage = computed<boolean>(() => meta.value.valid)
-
-const schema = yup.object({
-  name: yup.string().required().min(2).max(30),
-  email: yup.string().required().email(),
-  message: yup.string().required().min(2)
+const validationSchema = computed(() => {
+  return yup.object({
+    name: yup
+      .string()
+      .required(t('homePage.screen9.form.name_required_field'))
+      .min(2, t('homePage.screen9.form.name_min'))
+      .max(30, t('homePage.screen9.form.name_max')),
+    email: yup
+      .string()
+      .required(t('homePage.screen9.form.email_required_field'))
+      .email(t('homePage.screen9.form.email_must_be_valid_email')),
+    message: yup
+      .string()
+      .required(t('homePage.screen9.form.message_required_field'))
+      .min(2, t('homePage.screen9.form.message_must_min'))
+  })
 })
 
-const { handleSubmit, values, meta, resetForm } = useForm<UserFormOption>({
+const { handleSubmit, values, resetForm } = useForm<UserFormOption>({
   initialValues: {
     name: '',
     email: '',
     message: ''
   },
-  validationSchema: schema
+  validationSchema: validationSchema
 })
 
 const { value: name, errorMessage: nameError } = useField<string>('name')
@@ -143,20 +147,15 @@ const { value: message, errorMessage: messageError } = useField<string>('message
 
 const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
 
-const initialStateIsSent = (): void => {
-  isSent.value = false
-}
-
 const onSubmit = handleSubmit(async () => {
   console.log(values)
   isLoading.value = true
   await delay(2500)
+  isSent.value = true
   resetForm()
   isLoading.value = false
-  isSent.value = true
-})
-
-scrollClearForm(targetBlockRef, () => {
-  resetForm(), initialStateIsSent()
+  setTimeout(() => {
+    isSent.value = false
+  }, 2000)
 })
 </script>
