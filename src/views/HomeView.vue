@@ -1,6 +1,6 @@
 <template>
   <!-- FIRST BLOCK -->
-  <div class="box mx-auto">
+  <div>
     <div
       :style="{ 'background-image': 'url(' + BgImg1 + ')' }"
       class="w-full h-[784px] flex flex-col justify-center items-center bg-cover bg-center transition-all duration-300 ease-in-out"
