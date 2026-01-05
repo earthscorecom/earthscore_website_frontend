@@ -8,7 +8,7 @@
         <span class="pl-2 font-medium">EarhtScore</span>
       </RouterLink>
       <div class="text-base mt-[32px] mb-[48px] md:mt-0 md:mb-0 md:mr-10">
-        Copyright © 2024 WhatsGreen GmbH
+        Copyright © 2026 WhatsGreen GmbH
       </div>
       <div class="space-x-12 md:mr-10">
         <RouterLink
