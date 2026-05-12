@@ -37,6 +37,7 @@
       <swiper
         id="slider-team-pagination"
         :slides-per-view="slidesPerView"
+        :center-insufficient-slides="true"
         @init="onSwiperPagination"
       >
         <swiper-slide v-for="(user, i) in users" @click="onClikcBtn(i)" :key="i">
@@ -74,7 +75,6 @@ import SliderItem from './components/SliderItem.vue'
 import ImgUser1 from '@/assets/img/user-1.svg'
 import ImgUser2 from '@/assets/img/user-2.svg'
 import ImgUser3 from '@/assets/img/user-3.svg'
-import ImgUser4 from '@/assets/img/user-4.svg'
 import ImgUser5 from '@/assets/img/user-5.svg'
 import ImgUser6 from '@/assets/img/user-6.svg'
 
@@ -101,13 +101,6 @@ const users = computed(() => [
     deskPosition: t('homePage.screen8.item3.deskPosition'),
     img: ImgUser3,
     text: t('homePage.screen8.item3.text')
-  },
-  {
-    name: t('homePage.screen8.item4.name'),
-    position: t('homePage.screen8.item4.position'),
-    deskPosition: t('homePage.screen8.item4.deskPosition'),
-    img: ImgUser4,
-    text: t('homePage.screen8.item4.text')
   },
   {
     name: t('homePage.screen8.item5.name'),
