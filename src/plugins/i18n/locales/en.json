@@ -139,6 +139,7 @@
         "message": "Your message here",
         "btn": "Send message",
         "btnSent": "Message sent",
+        "btnError": "Something went wrong, please try again",
         "name_required_field": "name is a required field",
         "email_required_field": "email is a required field",
         "message_required_field": "message is a required field",

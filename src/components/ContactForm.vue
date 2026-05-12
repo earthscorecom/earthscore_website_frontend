@@ -1,6 +1,20 @@
 <template>
   <form @submit.prevent="onSubmit" action="" class="flex justify-center">
     <div class="md:max-w-[546px] w-full">
+      <div
+        aria-hidden="true"
+        style="position: absolute; left: -9999px; top: -9999px; height: 0; width: 0; overflow: hidden;"
+      >
+        <label for="website">Website</label>
+        <input
+          v-model="website"
+          type="text"
+          name="website"
+          id="website"
+          tabindex="-1"
+          autocomplete="off"
+        />
+      </div>
       <div class="grid md:grid-cols-2 gap-5">
         <div class="relative z-0">
           <label
@@ -91,6 +105,7 @@
           <span v-else class="group-hover:font-medium"> {{ t('homePage.screen9.form.btn') }}</span>
         </span>
       </button>
+      <div v-if="sendError" class="mt-3 text-sm text-warning-R300">{{ sendError }}</div>
     </div>
   </form>
 </template>
@@ -100,6 +115,7 @@ import { useI18n } from 'vue-i18n'
 import { computed, ref } from 'vue'
 import { useField, useForm } from 'vee-validate'
 import * as yup from 'yup'
+import emailjs from '@emailjs/browser'
 
 // import stores
 
@@ -113,6 +129,8 @@ type UserFormOption = {
 
 const isLoading = ref(false)
 const isSent = ref(false)
+const sendError = ref('')
+const website = ref('')
 
 const validationSchema = computed(() => {
   return yup.object({
@@ -145,17 +163,39 @@ const { value: name, errorMessage: nameError } = useField<string>('name')
 const { value: email, errorMessage: emailError } = useField<string>('email')
 const { value: message, errorMessage: messageError } = useField<string>('message')
 
-const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
-
 const onSubmit = handleSubmit(async () => {
-  console.log(values)
   isLoading.value = true
-  await delay(2500)
-  isSent.value = true
-  resetForm()
-  isLoading.value = false
-  setTimeout(() => {
-    isSent.value = false
-  }, 2000)
+  sendError.value = ''
+  if (website.value) {
+    isSent.value = true
+    resetForm()
+    website.value = ''
+    isLoading.value = false
+    setTimeout(() => {
+      isSent.value = false
+    }, 2000)
+    return
+  }
+  try {
+    await emailjs.send(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      {
+        name: values.name,
+        email: values.email,
+        message: values.message
+      },
+      { publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY }
+    )
+    isSent.value = true
+    resetForm()
+    setTimeout(() => {
+      isSent.value = false
+    }, 2000)
+  } catch {
+    sendError.value = t('homePage.screen9.form.btnError')
+  } finally {
+    isLoading.value = false
+  }
 })
 </script>

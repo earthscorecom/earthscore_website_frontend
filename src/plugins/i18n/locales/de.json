@@ -139,6 +139,7 @@
         "message": "Ihre Nachricht",
         "btn": "Nachricht senden",
         "btnSent": "Nachricht gesendet",
+        "btnError": "Etwas ist schiefgelaufen, bitte versuchen Sie es erneut",
         "name_required_field": "name ist ein pflichtfeld",
         "email_required_field": "e-mail-adresse ist ein pflichtfeld",
         "message_required_field": "die nachricht ist ein pflichtfeld.",
