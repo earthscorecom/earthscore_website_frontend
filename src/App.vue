@@ -1,27 +1,19 @@
 <template>
-  <div class="relative" :class="{ 'menu-open': showSideBar }">
-    <HeaderLayout>
-      <button
-        @click="toggleSidebar"
-        class="text-lg border border-black-N900 text-black-N900 rounded-lg px-1 py-1"
-      >
-        <MenuIcon></MenuIcon>
-      </button>
-    </HeaderLayout>
-    <SidebarLayout :is-open="showSideBar" @close="toggleSidebar"></SidebarLayout>
-    <RouterView></RouterView>
-    <FooterLayout></FooterLayout>
-  </div>
+  <RouterView />
+  <CookieConsent />
 </template>
+
 <script setup lang="ts">
-import HeaderLayout from '@/components/layouts/HeaderLayout.vue'
-import SidebarLayout from '@/components/layouts/SidebarLayout.vue'
-import FooterLayout from '@/components/layouts/FooterLayout.vue'
-import MenuIcon from '@/components/icons/MenuIcon.vue'
+import { watch } from 'vue'
+import { useI18n } from 'vue-i18n'
+import CookieConsent from './components/CookieConsent.vue'
+import { LANG_KEY } from './plugins/i18n/i18n'
 
-import { ref } from 'vue'
+const { locale } = useI18n()
 
-const showSideBar = ref(false)
-
-const toggleSidebar = () => (showSideBar.value = !showSideBar.value)
+// Persist the chosen language (shared with the legal pages) and keep <html lang> in sync.
+watch(locale, (lang) => {
+  localStorage.setItem(LANG_KEY, lang)
+  document.documentElement.setAttribute('lang', lang)
+})
 </script>

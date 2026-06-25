@@ -1,5 +1,5 @@
 <template>
-  <LegalDoc :html="legalDocs.impressum" current="impressum" />
+  <LegalDoc :html="legalDocs.datenschutz" current="datenschutz" />
 </template>
 
 <script setup lang="ts">

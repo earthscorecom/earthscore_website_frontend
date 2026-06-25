@@ -1,0 +1,161 @@
+/* ==========================================================================
+   EarthScore — Design Tokens
+   --------------------------------------------------------------------------
+   CANONICAL SOURCE OF TRUTH: ./design-system.css (shipped by the EarthScore
+   team, extracted from marketplace.html). That file uses --color-* / --space-*
+   / --radius-* / --font-size-* naming and is imported below.
+
+   This file re-exports those tokens under the --es-* alias namespace used by
+   the preview cards and UI kit, plus a handful of semantic element classes.
+   All values mirror design-system.css — if the two ever disagree, the
+   canonical file wins. Update there first.
+   ========================================================================== */
+
+@import url("./design-system.css");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  /* ====================================================================
+     COLOR — Brand chrome
+     Primary CTA is INK (#1c1c1c), not green. Blue #2563eb is accent/focus.
+     The sidebar uses the signature ink→blue gradient.
+     ==================================================================== */
+  --es-ink:        var(--color-brand-action);   /* #1c1c1c */
+  --es-ink-hover:  var(--color-brand-hover);     /* #111111 */
+  --es-blue:       var(--color-brand-blue);      /* #2563eb */
+  --es-blue-50:    var(--color-info-bg);         /* #dbeafe */
+  --es-grad-sidebar: linear-gradient(145.84deg, #1c1c1c 0%, #007bff 100%);
+
+  /* ====================================================================
+     COLOR — Text
+     ==================================================================== */
+  --es-fg-1: var(--color-text-primary);    /* #111827 headings */
+  --es-fg-2: var(--color-text-secondary);  /* #374151 body */
+  --es-fg-3: var(--color-text-secondary);  /* #374151 */
+  --es-fg-4: var(--color-text-muted);      /* #6b7280 */
+  --es-fg-5: var(--color-text-faint);      /* #9ca3af hint */
+  --es-fg-link: var(--color-text-link);    /* #2563eb */
+
+  /* ====================================================================
+     COLOR — Surfaces & borders
+     ==================================================================== */
+  --es-bg-page:    var(--color-bg-page);        /* #f9fafb */
+  --es-bg-card:    var(--color-bg-card);         /* #ffffff */
+  --es-bg-alt:     var(--color-bg-card-alt);     /* #fafafa */
+  --es-bg-tinted:  var(--color-bg-tinted);       /* #f3f4f6 */
+  --es-border-strong:  var(--color-border-strong);   /* #d1d5db */
+  --es-border:         var(--color-border-default);  /* #e5e7eb */
+  --es-border-subtle:  var(--color-border-subtle);   /* #f3f4f6 */
+
+  /* ====================================================================
+     COLOR — Status palette (each is bg / text / border)
+     success · info · warning · danger · neutral · special · payment · cyan
+     Full triplets live in design-system.css as --color-<status>-{bg,text,border}.
+     PURPLE is NOT a status — it is the raw-material TYPE identifier (below).
+     ==================================================================== */
+  --es-danger: var(--color-danger-text);   /* #dc2626 */
+
+  /* ====================================================================
+     COLOR — Type identifiers (material TYPE only — never status)
+     ⚠ CORRECTED from earlier reverse-engineered guess:
+        WASTE        = MAGENTA  (#c026d3 → #e879f9)
+        RAW MATERIAL = PURPLE   (#7c3aed → #a78bfa)
+     (The amber/emerald stripe from the legacy code is superseded.)
+     ==================================================================== */
+  --es-waste-grad:  linear-gradient(90deg, var(--color-type-waste-grad-1), var(--color-type-waste-grad-2));   /* magenta */
+  --es-waste-chip-bg: #fdf4ff;
+  --es-waste-chip-fg: #86198f;
+  --es-waste-chip-border: #f0abfc;
+
+  --es-raw-grad:    linear-gradient(90deg, var(--color-type-raw-material-grad-1), var(--color-type-raw-material-grad-2)); /* purple */
+  --es-raw-chip-bg: var(--color-type-raw-material-bg);      /* #f5f3ff */
+  --es-raw-chip-fg: var(--color-type-raw-material-text);    /* #5b21b6 */
+  --es-raw-chip-border: var(--color-type-raw-material-border); /* #c4b5fd */
+
+  /* ====================================================================
+     TYPE — Inter. Integer scale only (no .5px — half-pixels are tech debt).
+     ==================================================================== */
+  --es-font-sans: var(--font-family-sans);
+  --es-font-mono: var(--font-family-mono);
+
+  --es-text-xs:   var(--font-size-xs);    /* 11 meta */
+  --es-text-sm:   var(--font-size-sm);    /* 12 small labels */
+  --es-text-base: var(--font-size-base);  /* 13 body */
+  --es-text-md:   var(--font-size-md);    /* 14 prominent body / labels */
+  --es-text-lg:   var(--font-size-lg);    /* 15 card title */
+  --es-text-xl:   var(--font-size-xl);    /* 16 page subtitle */
+  --es-text-2xl:  var(--font-size-2xl);   /* 18 large/modal title */
+  --es-text-3xl:  var(--font-size-3xl);   /* 20 prominent label */
+  --es-text-4xl:  var(--font-size-4xl);   /* 24 KPI hero */
+  --es-text-5xl:  var(--font-size-5xl);   /* 28 page h1 */
+  --es-text-stat: var(--font-size-stat);  /* 32 wallet hero */
+  --es-text-stat-lg: var(--font-size-stat-lg); /* 38 CO₂ headline */
+
+  --es-w-regular: var(--font-weight-regular);
+  --es-w-medium:  var(--font-weight-medium);
+  --es-w-semi:    var(--font-weight-semibold);
+  --es-w-bold:    var(--font-weight-bold);
+
+  --es-lh-tight: 1.3;
+  --es-lh-snug:  1.4;
+  --es-lh-body:  1.55;
+
+  /* ====================================================================
+     SPACING — 4px baseline (mirrors --space-1..11)
+     ==================================================================== */
+  --es-space-1:  var(--space-1);   /* 4  */
+  --es-space-2:  var(--space-2);   /* 8  */
+  --es-space-3:  var(--space-3);   /* 10 */
+  --es-space-4:  var(--space-4);   /* 12 */
+  --es-space-5:  var(--space-5);   /* 14 */
+  --es-space-6:  var(--space-6);   /* 16 */
+  --es-space-7:  var(--space-7);   /* 18 */
+  --es-space-8:  var(--space-8);   /* 20 */
+  --es-space-9:  var(--space-9);   /* 24 */
+  --es-space-10: var(--space-10);  /* 28 */
+  --es-space-11: var(--space-11);  /* 32 */
+
+  /* ====================================================================
+     RADIUS — mirrors --radius-*
+     ==================================================================== */
+  --es-r-xxs:   var(--radius-xxs);   /* 3  */
+  --es-r-xs:    var(--radius-xs);    /* 6  */
+  --es-r-sm:    var(--radius-sm);    /* 8  buttons, inputs */
+  --es-r-md:    var(--radius-md);    /* 9  tabs, sub-cards */
+  --es-r-lg:    var(--radius-lg);    /* 10 */
+  --es-r-xl:    var(--radius-xl);    /* 12 */
+  --es-r-card:  var(--radius-card);  /* 14 */
+  --es-r-modal: var(--radius-modal); /* 18 */
+  --es-r-pill:  var(--radius-pill);  /* 99 */
+
+  /* ====================================================================
+     SHADOWS — soft, never colored
+     ==================================================================== */
+  --es-shadow-card:  var(--shadow-card-hover);  /* 0 4px 16px rgba(0,0,0,.09) */
+  --es-shadow-pop:   var(--shadow-dropdown);    /* 0 4px 12px rgba(0,0,0,.10) */
+  --es-shadow-modal: var(--shadow-modal);       /* 0 24px 64px rgba(0,0,0,.25) */
+  --es-focus-ring:   0 0 0 3px var(--color-brand-blue-focus-shadow);
+
+  /* ====================================================================
+     LAYOUT & MOTION
+     ==================================================================== */
+  --es-sidebar-w: var(--layout-sidebar-width);  /* 256 */
+  --es-topbar-h:  var(--layout-topbar-height);  /* 64 */
+  --es-dur-fast: .15s;
+  --es-dur-slow: .25s;
+  --es-ease:     ease;
+}
+
+/* ==========================================================================
+   SEMANTIC ELEMENT STYLES (convenience classes for mocks/prototypes)
+   For canonical component classes (.btn, .badge, .chip, .card, .tabs, .input,
+   .modal, .dropdown) use design-system.css directly.
+   ========================================================================== */
+
+.es-h1 { font: var(--es-w-bold) var(--es-text-5xl)/var(--es-lh-tight) var(--es-font-sans); color: var(--es-ink); letter-spacing: -.01em; }
+.es-h2 { font: var(--es-w-semi) var(--es-text-2xl)/var(--es-lh-snug) var(--es-font-sans); color: var(--es-fg-1); }
+.es-h3 { font: var(--es-w-semi) var(--es-text-md)/var(--es-lh-snug) var(--es-font-sans); color: var(--es-fg-1); }
+.es-body { font: var(--es-w-regular) var(--es-text-md)/var(--es-lh-body) var(--es-font-sans); color: var(--es-fg-3); }
+.es-body-sm { font: var(--es-w-regular) var(--es-text-base)/var(--es-lh-body) var(--es-font-sans); color: var(--es-fg-4); }
+.es-caption { font: var(--es-w-regular) var(--es-text-xs)/1.4 var(--es-font-sans); color: var(--es-fg-5); }
+.es-mono { font: var(--es-w-regular) var(--es-text-base)/1.4 var(--es-font-mono); color: var(--es-fg-3); }
