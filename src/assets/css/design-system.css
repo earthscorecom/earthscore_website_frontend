@@ -1,0 +1,619 @@
+/* ════════════════════════════════════════════════════════════════════════
+   CircularAI / EarthScore — DESIGN SYSTEM
+   ════════════════════════════════════════════════════════════════════════
+
+   PURPOSE
+   This file is the extracted, documented design system for the marketplace
+   prototype (marketplace.html). It is the single source of truth for design
+   tokens (colors, typography, spacing, radii, shadows, z-index) and the
+   canonical component patterns (tabs, badges, chips, cards, buttons).
+
+   HOW TO USE
+   • Reference tokens with var(), e.g.  color: var(--color-text-primary);
+     Never hardcode hex values in new components — add a token if one is
+     missing.
+   • For status pills use the canonical .badge + .badge--<variant> classes.
+   • For tab groups use .tabs / .tab.
+   • Match the type scale (--font-size-*) — integer values only, no .5px.
+
+   SCOPE
+   • Desktop only. Mobile / responsive layout is post-MVP.
+   • UI copy is English. The live prototype is multilingual, but only
+     number / currency / date values are localized at runtime (via the
+     Intl-based fmtNum / fmtCur / fmtDate helpers). This design system
+     documents the EN presentation only.
+
+   PALETTE PHILOSOPHY (read before adding colors)
+   • Each STATUS has a triplet: background / text / border.
+   • PURPLE is reserved exclusively as the "raw material" TYPE identifier.
+     It is NOT a status color. Magenta is the "waste" TYPE identifier.
+   • The CHART palette is categorical/decorative and carries no semantic
+     meaning — do not borrow chart colors for status.
+
+   KNOWN TECH DEBT (tracked for future migration — see bottom of file)
+   • Phase 6 — Button consolidation ✓ DONE (canonical .btn system below)
+   • Phase 7 — Modal consolidation ✓ DONE (canonical .overlay/.modal below)
+   • Phase 8 — Component prefix rename ✗ WON'T DO (see rationale + namespace
+     legend at bottom of file; prefixes are a working convention)
+   • Half-pixel font sizes (~280 instances) → snap to --font-size-* scale
+   • .12s transitions (~60 instances) → snap to --t-fast (.15s)
+   • Inline-styled buttons ✓ DONE — all static inline skins migrated to .btn
+     variants. Only 7 genuinely dynamic ones remain by design: 3 pagination
+     buttons (style from the btnStyle() state helper) + 4 delivery-check
+     toggles (border/bg colour computed by ${} state ternary).
+   ════════════════════════════════════════════════════════════════════════ */
+
+
+/* ════════════════════════════════════════════════════════════════════════
+   1. DESIGN TOKENS
+   ════════════════════════════════════════════════════════════════════════ */
+:root {
+
+  /* ── COLORS · TEXT ─────────────────────────────────────────────────── */
+  --color-text-primary:   #111827;  /* primary content, headings          */
+  --color-text-secondary: #374151;  /* secondary content, body            */
+  --color-text-muted:     #6b7280;  /* captions, supporting text          */
+  --color-text-faint:     #9ca3af;  /* hint, placeholder, faintest         */
+  --color-text-link:      #2563eb;  /* inline links, "View all"           */
+
+  /* ── COLORS · SURFACES ─────────────────────────────────────────────── */
+  --color-bg-page:        #f9fafb;
+  --color-bg-card:        #ffffff;
+  --color-bg-card-alt:    #fafafa;  /* sub-card / inset surface           */
+  --color-bg-tinted:      #f3f4f6;
+
+  /* ── COLORS · BORDERS ──────────────────────────────────────────────── */
+  --color-border-strong:  #d1d5db;  /* form inputs                        */
+  --color-border-default: #e5e7eb;  /* cards, dividers                    */
+  --color-border-subtle:  #f3f4f6;
+
+  /* ── COLORS · BRAND ────────────────────────────────────────────────── */
+  --color-brand-action:   #1c1c1c;  /* primary CTA background             */
+  --color-brand-hover:    #111111;
+  --color-brand-blue:     #2563eb;  /* accent / focus ring                */
+  --color-brand-blue-focus-shadow: rgba(37, 99, 235, .15);
+
+  /* ── COLORS · STATUS PALETTE  (triplet: bg / text / border) ────────────
+     See the STATUS COLOR MATRIX in section 2 for the meaning of each. */
+
+  /* SUCCESS — paid, completed, savings, key-account */
+  --color-success-bg:     #f0fdf4;
+  --color-success-text:   #16a34a;
+  --color-success-border: #bbf7d0;
+
+  /* INFO — active, draft-action, primary action */
+  --color-info-bg:        #dbeafe;
+  --color-info-text:      #1d4ed8;
+  --color-info-border:    #93c5fd;
+
+  /* WARNING — open, pending, negotiating, expiring */
+  --color-warning-bg:     #fef3c7;
+  --color-warning-text:   #d97706;
+  --color-warning-border: #fde68a;
+
+  /* DANGER — overdue, error, urgent, cancelled-red */
+  --color-danger-bg:      #fef2f2;
+  --color-danger-text:    #dc2626;
+  --color-danger-border:  #fecaca;
+
+  /* NEUTRAL — draft, cancelled-gray, paused, archived */
+  --color-neutral-bg:     #f3f4f6;
+  --color-neutral-text:   #6b7280;
+  --color-neutral-border: #e5e7eb;
+
+  /* SPECIAL / SLATE — credit-note, issued (replaces former purple status) */
+  --color-special-bg:     #f1f5f9;
+  --color-special-text:   #475569;
+  --color-special-border: #cbd5e1;
+
+  /* PAYMENT — payment status, lead */
+  --color-payment-bg:     #f0fdfa;
+  --color-payment-text:   #0d9488;
+  --color-payment-border: #99f6e4;
+
+  /* CYAN — delivery status */
+  --color-cyan-bg:        #ecfeff;
+  --color-cyan-text:      #0891b2;
+  --color-cyan-border:    #a5f3fc;
+
+  /* ── COLORS · TYPE IDENTIFIERS  (material type only — never status) ──── */
+
+  /* RAW MATERIAL (purple) — chips, stripes, icons */
+  --color-type-raw-material-bg:     #f5f3ff;
+  --color-type-raw-material-text:   #5b21b6;
+  --color-type-raw-material-border: #c4b5fd;
+  --color-type-raw-material-grad-1: #7c3aed;
+  --color-type-raw-material-grad-2: #a78bfa;
+
+  /* WASTE (magenta) — chips, stripes, icons */
+  --color-type-waste-grad-1: #c026d3;
+  --color-type-waste-grad-2: #e879f9;
+
+  /* ── COLORS · CHART PALETTE  (categorical, decorative — no semantics) ───
+     Material Mix doughnut + similar. Spec order: teal, purple, amber,
+     coral, blue, slate. "Other" uses the quieter slate slot. */
+  --color-chart-1: #5eead4;  /* teal      — slot 1                        */
+  --color-chart-2: #a78bfa;  /* purple    — slot 2 (chart-only purple OK) */
+  --color-chart-3: #fbbf24;  /* amber     — slot 3                        */
+  --color-chart-4: #fb923c;  /* coral     — slot 4                        */
+  --color-chart-5: #60a5fa;  /* blue      — slot 5                        */
+  --color-chart-6: #cbd5e1;  /* slate-300 — slot 6 / "Other"             */
+
+  /* ── TYPOGRAPHY ────────────────────────────────────────────────────── */
+  --font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-mono: 'SF Mono', Menlo, monospace;
+
+  /* Font-size scale — snap to these (no .5 increments). */
+  --font-size-xs:      11px;   /* meta, tiny labels                       */
+  --font-size-sm:      12px;   /* small labels, captions                  */
+  --font-size-base:    13px;   /* body                                    */
+  --font-size-md:      14px;   /* prominent body, form labels             */
+  --font-size-lg:      15px;   /* card titles                             */
+  --font-size-xl:      16px;   /* page subtitle                           */
+  --font-size-2xl:     18px;   /* large card title, modal title           */
+  --font-size-3xl:     20px;   /* prominent label                         */
+  --font-size-4xl:     24px;   /* KPI hero number                         */
+  --font-size-5xl:     28px;   /* page h1                                 */
+  --font-size-stat:    32px;   /* token wallet hero, big stat             */
+  --font-size-stat-lg: 38px;   /* CO₂ headline                            */
+
+  /* Font weights used across the app */
+  --font-weight-regular: 400;
+  --font-weight-medium:  500;
+  --font-weight-semibold:600;
+  --font-weight-bold:    700;
+
+  /* ── SPACING (4px baseline) ────────────────────────────────────────── */
+  --space-1:   4px;
+  --space-2:   8px;
+  --space-3:  10px;
+  --space-4:  12px;
+  --space-5:  14px;
+  --space-6:  16px;
+  --space-7:  18px;
+  --space-8:  20px;
+  --space-9:  24px;
+  --space-10: 28px;
+  --space-11: 32px;
+
+  /* ── BORDER RADIUS ──────────────────────────────────────────────────
+     Use these tokens going forward. 2-3px values are kept only for tiny
+     visual indicators where the canonical scale would be too round. */
+  --radius-xxs:    3px;   /* tiny dots / indicators (legacy)              */
+  --radius-xs:     6px;
+  --radius-sm:     8px;   /* buttons, inputs                             */
+  --radius-md:     9px;   /* tabs, sub-cards                             */
+  --radius-lg:    10px;
+  --radius-xl:    12px;
+  --radius-card:  14px;
+  --radius-modal: 18px;
+  --radius-pill:  99px;
+
+  /* ── TRANSITIONS ───────────────────────────────────────────────────── */
+  --t-fast:  .15s ease;   /* most UI                                      */
+  --t-slow:  .25s ease;   /* modal pop, larger transitions                */
+  --t-chart: .4s ease;    /* chart bar animations                         */
+
+  /* ── Z-INDEX SCALE ─────────────────────────────────────────────────── */
+  --z-base:      1;
+  --z-sticky:   50;
+  --z-overlay: 100;
+  --z-modal:   200;
+  --z-toast:   300;
+  --z-dropdown:400;
+
+  /* ── SHADOWS ───────────────────────────────────────────────────────── */
+  --shadow-card-hover: 0 4px 16px rgba(0, 0, 0, .09);
+  --shadow-modal:      0 24px 64px rgba(0, 0, 0, .25);
+  --shadow-dropdown:   0 4px 12px rgba(0, 0, 0, .10);
+
+  /* ── LAYOUT DIMENSIONS ─────────────────────────────────────────────── */
+  --layout-sidebar-width: 256px;
+  --layout-topbar-height: 64px;
+  --layout-page-pad-y:    28px;
+  --layout-page-pad-x:    32px;
+  --layout-page-gap:      24px;
+}
+
+
+/* ════════════════════════════════════════════════════════════════════════
+   2. STATUS COLOR MATRIX — quick reference
+   ────────────────────────────────────────────────────────────────────────
+   Status meaning                → Token group        Canonical class
+   Paid / Completed / Saved      → --color-success-*  .badge--success
+   Active / Confirmed / Action   → --color-info-*     .badge--info
+   Open / Pending / Negotiating  → --color-warning-*  .badge--warning
+   Overdue / Error / Urgent      → --color-danger-*   .badge--danger
+   Draft / Paused / Archived     → --color-neutral-*  .badge--neutral
+   Credit Note / Issued          → --color-special-*  .badge--special
+   Payment / Lead                → --color-payment-*  .badge--payment
+   Delivery                      → --color-cyan-*     .badge--cyan
+   ──
+   CRM RELATIONSHIP STATUS (per the dashboard "Top Partners" palette):
+   Lead         → --color-payment-*  .badge--payment   (prospect, teal)
+   Active       → --color-info-*     .badge--info      (currently trading, blue)
+   Key Account  → --color-success-*  .badge--success   (high-value, green)
+   Inactive     → --color-warning-*  .badge--warning   (lapsed, amber)
+   Archived     → --color-neutral-*  .badge--neutral   (historical, gray)
+   ──
+   Type: Raw Material            → --color-type-raw-material-*   (NOT status)
+   Type: Waste                   → --color-type-waste-*          (NOT status)
+   ════════════════════════════════════════════════════════════════════════ */
+
+
+/* ════════════════════════════════════════════════════════════════════════
+   3. TYPOGRAPHY REFERENCE
+   ════════════════════════════════════════════════════════════════════════ */
+body {
+  font-family: var(--font-family-sans);
+  color: var(--color-brand-action);
+  background: var(--color-bg-card-alt);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Page heading — top of every page */
+.page-header h1 {
+  font-size: var(--font-size-5xl);          /* 28px */
+  font-weight: var(--font-weight-bold);     /* 700  */
+  color: var(--color-brand-action);
+}
+.page-header p {
+  font-size: var(--font-size-md);           /* 14px */
+  color: #737373;                            /* muted subtitle */
+  margin-top: 3px;
+}
+
+/* Card / section title */
+.section-title,
+.card-title {
+  font-size: var(--font-size-md);           /* 14px */
+  font-weight: var(--font-weight-semibold); /* 600  */
+  color: var(--color-text-primary);
+  line-height: 1.4;
+}
+
+/* Body / supporting text */
+.text-body  { font-size: var(--font-size-base); color: var(--color-text-secondary); }
+.text-muted { font-size: var(--font-size-sm);   color: var(--color-text-muted); }
+.text-faint { font-size: var(--font-size-xs);   color: var(--color-text-faint); }
+
+
+/* ════════════════════════════════════════════════════════════════════════
+   4. PAGE LAYOUT & GRID
+   ════════════════════════════════════════════════════════════════════════ */
+
+/* The page scroll container */
+.pages { flex: 1; overflow-y: auto; }
+
+/* A single page. Pages are stacked; only .active is shown. */
+.page {
+  display: none;
+  flex-direction: column;
+  gap: var(--layout-page-gap);                              /* 24px */
+  padding: var(--layout-page-pad-y) var(--layout-page-pad-x); /* 28 / 32 */
+  min-height: 100%;
+}
+.page.active { display: flex; }
+
+/* Common content grids (desktop, fixed columns). */
+.grid-3      { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); }
+.grid-2      { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-6); }
+.grid-main-aside { display: grid; grid-template-columns: 1fr 300px; gap: var(--space-8); align-items: start; }
+
+
+/* ════════════════════════════════════════════════════════════════════════
+   5. CANONICAL COMPONENTS
+   ════════════════════════════════════════════════════════════════════════ */
+
+/* ── 5.1 CARD ──────────────────────────────────────────────────────────── */
+.card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-card);                /* 14px */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow var(--t-slow), border-color var(--t-slow);
+}
+.card:hover {
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--color-border-strong);
+}
+.card-inner { padding: var(--space-7); display: flex; flex-direction: column; gap: 11px; flex: 1; }
+
+/* Type stripe at top of a card (material type identifier) */
+.card-stripe { height: 3px; }
+.card-stripe.raw_material { background: linear-gradient(90deg, var(--color-type-raw-material-grad-1), var(--color-type-raw-material-grad-2)); }
+.card-stripe.waste        { background: linear-gradient(90deg, var(--color-type-waste-grad-1), var(--color-type-waste-grad-2)); }
+
+
+/* ── 5.2 TABS · pill-group pattern ───────────────────────────────────────
+   Future code: use .tabs / .tab. In the prototype these are aliased from
+   .ml-tabs / .settings-tabs / .msg-page-tabs / .admin-tabs. */
+.tabs {
+  display: flex;
+  border: 1px solid #e6e6e6;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--color-bg-card-alt);
+  align-self: flex-start;
+  width: fit-content;
+}
+.tab {
+  display: flex; align-items: center; gap: 6px;
+  padding: 7px 16px;
+  border: none; background: transparent;
+  color: #737373;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  font-family: inherit;
+  cursor: pointer;
+  transition: background var(--t-fast), color var(--t-fast);
+  white-space: nowrap;
+}
+.tab.active {
+  background: var(--color-bg-card);
+  color: var(--color-brand-action);
+  font-weight: var(--font-weight-medium);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .08);
+}
+.tab:hover:not(.active) {
+  color: var(--color-text-secondary);
+  background: rgba(0, 0, 0, .03);
+}
+
+/* Count badge inside a tab (neutral — total counts) */
+.tab-count {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 18px; height: 18px; padding: 0 4px;
+  border-radius: var(--radius-pill);
+  background: var(--color-bg-tinted);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+}
+.tab.active .tab-count {
+  background: var(--color-border-default);
+  color: var(--color-text-secondary);
+}
+
+
+/* ── 5.3 BADGES · status pills ───────────────────────────────────────────
+   Future code: .badge + .badge--<variant>.
+   Variants: success / info / warning / danger / neutral / special /
+             payment / cyan / partial. */
+.badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  border: 1px solid transparent;
+}
+.badge--success { background: var(--color-success-bg); color: var(--color-success-text); border-color: var(--color-success-border); }
+.badge--info    { background: var(--color-info-bg);    color: var(--color-info-text);    border-color: var(--color-info-border); }
+.badge--warning { background: var(--color-warning-bg); color: var(--color-warning-text); border-color: var(--color-warning-border); }
+.badge--danger  { background: var(--color-danger-bg);  color: var(--color-danger-text);  border-color: var(--color-danger-border); }
+.badge--neutral { background: var(--color-neutral-bg); color: var(--color-neutral-text); border-color: var(--color-neutral-border); }
+.badge--special { background: var(--color-special-bg); color: var(--color-special-text); border-color: var(--color-special-border); }
+.badge--payment { background: var(--color-payment-bg); color: var(--color-payment-text); border-color: var(--color-payment-border); }
+.badge--cyan    { background: var(--color-cyan-bg);    color: var(--color-cyan-text);    border-color: var(--color-cyan-border); }
+.badge--partial { background: #ffedd5; color: #c2410c; border-color: #fed7aa; }
+
+
+/* ── 5.4 CHIPS · material-type / category tags ───────────────────────────
+   Distinct from status badges: chips identify TYPE or category, not state. */
+.chip {
+  display: inline-flex; align-items: center;
+  padding: 2px 9px;
+  border-radius: var(--radius-pill);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  border: 1px solid;
+}
+.chip.raw_material { background: var(--color-type-raw-material-bg); color: var(--color-type-raw-material-text); border-color: var(--color-type-raw-material-border); }
+.chip.waste        { background: #fdf4ff; color: #86198f; border-color: #f0abfc; }
+.chip.cat          { background: var(--color-bg-tinted); color: var(--color-text-muted); border-color: var(--color-border-default); }
+
+
+/* ── 5.5 BUTTONS ─────────────────────────────────────────────────────────
+   Use .btn + .btn--<variant> [+ .btn--sm/.btn--xs/.btn--lg] [+ .btn--block] [+ .btn--icon].
+   Variants: primary / secondary / success / danger / danger-soft / neutral / ghost / warning-soft.
+   This is the canonical system from Phase 6 (replaced ~55 legacy *-btn CTA classes).
+   NOT for segmented toggles, tabs or dropdown triggers — those keep their own classes. */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  padding: 9px 16px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  background: transparent;
+  font-family: inherit;
+  font-size: var(--font-size-base);   /* 13px */
+  font-weight: var(--font-weight-medium);
+  line-height: 1.2;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background var(--t-fast), border-color var(--t-fast), color var(--t-fast), transform .1s;
+}
+.btn:disabled, .btn.is-disabled { opacity: .4; cursor: not-allowed; pointer-events: none; }
+
+/* Variants */
+.btn--primary { background: var(--color-brand-action); color: #fff; }
+.btn--primary:hover:not(:disabled)  { background: var(--color-brand-hover); }
+.btn--primary:active:not(:disabled) { transform: scale(.97); }
+
+.btn--secondary { background: var(--color-bg-card); color: var(--color-text-secondary); border-color: var(--color-border-default); }
+.btn--secondary:hover:not(:disabled) { background: var(--color-bg-page); border-color: var(--color-border-strong); }
+
+.btn--success { background: var(--color-success-text); color: #fff; }   /* #16a34a */
+.btn--success:hover:not(:disabled) { background: #15803d; }
+
+.btn--danger { background: var(--color-danger-text); color: #fff; }      /* #dc2626 */
+.btn--danger:hover:not(:disabled) { background: #b91c1c; }
+
+.btn--danger-soft { background: var(--color-bg-card); color: var(--color-danger-text); border-color: var(--color-danger-border); }
+.btn--danger-soft:hover:not(:disabled) { background: var(--color-danger-bg); border-color: #f87171; }
+
+.btn--neutral { background: var(--color-bg-tinted); color: var(--color-text-secondary); border-color: var(--color-border-default); }
+.btn--neutral:hover:not(:disabled) { background: var(--color-border-default); }
+
+.btn--ghost { background: transparent; color: var(--color-text-muted); border-color: transparent; }
+.btn--ghost:hover:not(:disabled) { background: var(--color-bg-tinted); color: var(--color-text-primary); }
+
+.btn--warning-soft { background: var(--color-bg-card); color: #c2410c; border-color: #fed7aa; }
+.btn--warning-soft:hover:not(:disabled) { background: #fff7ed; }
+
+/* Sizes (default = 13px / 9px 16px) */
+.btn--xs { padding: 4px 10px; font-size: var(--font-size-sm); }   /* 12px */
+.btn--sm { padding: 6px 12px; font-size: var(--font-size-sm); }
+.btn--lg { padding: 12px 20px; font-size: var(--font-size-md); font-weight: var(--font-weight-semibold); }
+
+/* Modifiers */
+.btn--block  { width: 100%; }
+.btn--flex   { flex: 1; }            /* equal-width sibling in a flex row */
+.btn--strong { font-weight: var(--font-weight-semibold); }
+.btn--bare   { padding: 0; background: transparent; border: none; }   /* inline text/back link */
+.btn--icon   { width: 32px; height: 32px; padding: 0; gap: 0; }
+.btn--icon.btn--sm { width: 28px; height: 28px; }
+.btn--icon.btn--lg { width: 42px; height: 42px; }
+
+
+/* ── 5.6 FORM INPUTS ─────────────────────────────────────────────────── */
+.input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-md);
+  font-family: inherit;
+  background: var(--color-bg-card);
+  color: var(--color-text-primary);
+  outline: none;
+  transition: border-color var(--t-slow), box-shadow var(--t-slow);
+}
+.input::placeholder { color: var(--color-text-faint); }
+.input:focus {
+  border-color: var(--color-brand-blue);
+  box-shadow: 0 0 0 3px var(--color-brand-blue-focus-shadow);
+}
+
+
+/* ── 5.7 MODAL & OVERLAY ─────────────────────────────────────────────────
+   Phase 7 collapsed 8 bespoke *-overlay backdrops into one .overlay and 8
+   modal-box classes into .modal + size/scroll modifiers.
+   Backdrop:  .overlay  (toggle .open via JS — by element ID).
+   Box:       .modal + size (--sm/--md/--wide/--lg) + scroll behaviour
+              (--flush = inner body scrolls; --scroll = whole box scrolls).
+   (admin-overlay is intentionally kept separate: JS-generated, z 9000.) */
+.overlay {
+  display: none;
+  position: fixed; inset: 0;
+  background: rgba(0, 0, 0, .45);
+  backdrop-filter: blur(4px);
+  z-index: var(--z-overlay);
+  align-items: center; justify-content: center;
+  padding: var(--space-6);
+}
+.overlay.open { display: flex; }
+.modal {
+  background: var(--color-bg-card);
+  border-radius: var(--radius-modal);
+  width: 100%; max-width: 440px;
+  box-shadow: var(--shadow-modal);
+  overflow: hidden;
+  z-index: var(--z-modal);
+  animation: modalPop .18s ease;
+}
+.modal--sm   { max-width: 400px; }
+.modal--md   { max-width: 480px; }
+.modal--wide { max-width: 520px; }
+.modal--lg   { max-width: 560px; }
+.modal--flush  { max-height: 90vh; display: flex; flex-direction: column; }  /* inner body scrolls */
+.modal--scroll { max-height: 90vh; overflow-y: auto; }                        /* whole box scrolls */
+@keyframes modalPop {
+  from { transform: scale(.95) translateY(8px); opacity: 0; }
+  to   { transform: none; opacity: 1; }
+}
+
+
+/* ── 5.8 DROPDOWN MENU ───────────────────────────────────────────────────
+   Pattern used by the language switcher / sort menus etc. */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 8px); right: 0;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-dropdown);
+  min-width: 200px;
+  padding: 6px;
+  z-index: var(--z-dropdown);
+  display: none;
+}
+.dropdown.open { display: block; }
+.dropdown-item {
+  padding: 10px 14px;
+  font-size: var(--font-size-md);
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-regular);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  text-align: left;
+  transition: background var(--t-fast), color var(--t-fast);
+}
+.dropdown-item:hover     { background: var(--color-brand-blue); color: #fff; }
+.dropdown-item.is-active { font-weight: var(--font-weight-bold); }
+
+
+/* ════════════════════════════════════════════════════════════════════════
+   6. CLEANUP BACKLOG (known tech debt — for the next developer)
+   ────────────────────────────────────────────────────────────────────────
+   Phase 6 — BUTTON CONSOLIDATION ✓ DONE
+     ~55 named *-btn CTA classes collapsed into the canonical .btn system
+     (section 5.5). Remaining: ~23 inline-styled buttons, mostly JS-generated
+     (offer accept/pay, pagination) — finish in a follow-up pass.
+
+   Phase 7 — MODAL CONSOLIDATION ✓ DONE
+     8 bespoke *-overlay backdrops collapsed to one .overlay; 8 modal-box
+     classes collapsed to .modal + size/scroll modifiers (section 5.7).
+     Inner *-modal-head/body/actions structures left as-is (feature-scoped).
+     admin-overlay kept separate (JS-generated, z 9000).
+
+   Phase 8 — COMPONENT PREFIX RENAME  ✗ WON'T DO (decided)
+     Audited: ~805 CSS rule lines, ~1443 HTML class occurrences and ~55 JS
+     selectors carry feature prefixes. Unlike Phases 6-7 these are NOT
+     duplication — they're a working per-feature namespacing convention.
+     A wholesale rename would be ~2,300 touch points of pure churn with high
+     regression risk (any missed JS selector silently breaks an interaction)
+     and zero visual/functional benefit. Decision: keep the prefixes; make
+     them self-documenting via the legend below.
+
+     NAMESPACE LEGEND (prefix → feature/area)
+       ml-       My Listings (listing cards, publish/pause/close)
+       td-       Trade Detail (the single-trade workspace)
+       tfl-      Trade-Flow List (trade cards on the Trades page)
+       trade-    Trades page shell (list, compose, filters)
+       inv-      Invoices (rows, timeline, filters)
+       co2-      CO₂ Impact page (metrics, charts, exports)
+       rfq-      Request-for-Quote modal/flow
+       aw-       Add-Waste / create-listing modal
+       cr-       Choice/counter modal (e.g. "Add a listing / Notify me")
+       dm-       Direct-Message modal
+       detail-   public Listing Detail page
+       seller-   seller stats block (on Listing Detail)
+       pkg-      packaging tips / buy-pack
+       pu-       price-unit + pickup selectors
+       cd-       category dropdown
+       av-       availability filter
+       conv-     conversation list (Messages sidebar)
+       chat-     chat thread area (Messages)
+       msg-      Messages page tabs
+       admin-    Admin (emission-factor management)
+       settings- Settings page
+
+   MICRO-CLEANUP
+     • Half-pixel font sizes (10.5/11.5/12.5/13.5px, ~280 instances) →
+       snap to the --font-size-* integer scale.
+     • .12s transitions (~60 instances) → snap to --t-fast (.15s).
+     • Remaining hardcoded hex values → replace with the matching token.
+   ════════════════════════════════════════════════════════════════════════ */
