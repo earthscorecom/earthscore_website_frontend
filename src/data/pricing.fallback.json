@@ -1,0 +1,68 @@
+{
+  "currency": "EUR",
+  "annual_discount_pct": 15,
+  "tokens_per_credit": 10,
+  "billing_cycles": ["monthly", "annual"],
+  "cards": [
+    {
+      "id": "free_trial",
+      "name": "Free Trial",
+      "is_trial": true,
+      "monthly_price_eur": 0,
+      "annual_price_eur": 0,
+      "monthly_credits": 10000,
+      "included_seats": 1,
+      "trial_days": 14,
+      "badge": null,
+      "self_serve": true
+    },
+    {
+      "id": "starter",
+      "name": "Starter",
+      "is_trial": false,
+      "monthly_price_eur": 129,
+      "annual_price_eur": 1316,
+      "monthly_credits": 25000,
+      "included_seats": 3,
+      "trial_days": null,
+      "badge": null,
+      "self_serve": true
+    },
+    {
+      "id": "team",
+      "name": "Team",
+      "is_trial": false,
+      "monthly_price_eur": 499,
+      "annual_price_eur": 5090,
+      "monthly_credits": 150000,
+      "included_seats": 10,
+      "trial_days": null,
+      "badge": "popular",
+      "self_serve": true
+    },
+    {
+      "id": "scale",
+      "name": "Scale",
+      "is_trial": false,
+      "monthly_price_eur": 1490,
+      "annual_price_eur": 15198,
+      "monthly_credits": 500000,
+      "included_seats": 25,
+      "trial_days": null,
+      "badge": "best_value",
+      "self_serve": true
+    },
+    {
+      "id": "enterprise",
+      "name": "Enterprise",
+      "is_trial": false,
+      "monthly_price_eur": 3000,
+      "annual_price_eur": 30600,
+      "monthly_credits": 1500000,
+      "included_seats": 50,
+      "trial_days": null,
+      "badge": null,
+      "self_serve": true
+    }
+  ]
+}
