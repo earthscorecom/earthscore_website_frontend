@@ -60,6 +60,7 @@
 import { computed, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { appLinks } from '@/config/appLinks'
+import pricing from 'virtual:pricing'
 
 const { t, locale } = useI18n()
 
@@ -72,6 +73,7 @@ const NOTE = {
 const billNote = computed(() => NOTE[mode.value][locale.value === 'en' ? 'en' : 'de'])
 
 interface Plan {
+  id: string
   tier: string
   featured?: boolean
   badge?: string
@@ -87,58 +89,82 @@ interface Plan {
   seatNote?: string
 }
 
-const plans: Plan[] = [
+// Presentation layer: marketing copy, badges and i18n keys live here and are
+// keyed by `id`. The actual numbers (prices, credits, seats) are merged in from
+// `virtual:pricing`, which is fetched from VITE_PRICING_API_URL at build time.
+const planMeta: Plan[] = [
   {
+    id: 'free_trial',
     tier: 'Free Trial',
     badge: 'price.badge.limited',
     badgeClass: 'price-badge--limited',
-    fixed: '0',
     period: 'price.trial14',
-    credits: '10.000 Credits',
     creditsUnit: 'price.included-u',
-    seats: '1',
+    credits: '',
+    seats: '',
     seatsLabel: 'price.seat1'
   },
   {
+    id: 'starter',
     tier: 'Starter',
-    monthly: '129',
-    annual: '110',
-    credits: '25.000 Credits',
     creditsUnit: 'price.permonth-u',
-    seats: '3',
+    credits: '',
+    seats: '',
     seatsLabel: 'price.seats'
   },
   {
+    id: 'team',
     tier: 'Team',
     featured: true,
     badge: 'price.badge.popular',
-    monthly: '499',
-    annual: '424',
-    credits: '150.000 Credits',
     creditsUnit: 'price.permonth-u',
-    seats: '10',
+    credits: '',
+    seats: '',
     seatsLabel: 'price.seats'
   },
   {
+    id: 'scale',
     tier: 'Scale',
     badge: 'price.badge.best',
     badgeClass: 'price-badge--ghost',
-    monthly: '1.490',
-    annual: '1.267',
-    credits: '500.000 Credits',
     creditsUnit: 'price.permonth-u',
-    seats: '25',
+    credits: '',
+    seats: '',
     seatsLabel: 'price.seats'
   },
   {
+    id: 'enterprise',
     tier: 'Enterprise',
-    monthly: '3.000',
-    annual: '2.550',
-    credits: '1.500.000 Credits',
     creditsUnit: 'price.permonth-u',
-    seats: '50',
+    credits: '',
+    seats: '',
     seatsLabel: 'price.seats',
     seatNote: 'price.ent.sub'
   }
 ]
+
+const eur = (n: number) => n.toLocaleString('de-DE')
+
+const plans = computed<Plan[]>(() =>
+  planMeta.map((meta) => {
+    const card = pricing.cards.find((c) => c.id === meta.id)
+    if (!card) return meta
+
+    const merged: Plan = {
+      ...meta,
+      credits: `${eur(card.monthly_credits)} Credits`,
+      seats: String(card.included_seats)
+    }
+
+    if (card.is_trial || card.monthly_price_eur === 0) {
+      merged.fixed = eur(card.monthly_price_eur)
+    } else {
+      merged.monthly = eur(card.monthly_price_eur)
+      // API gives the full annual total; the card shows a per-month figure.
+      merged.annual = eur(Math.round(card.annual_price_eur / 12))
+    }
+
+    return merged
+  })
+)
 </script>
